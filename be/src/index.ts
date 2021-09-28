@@ -3,7 +3,7 @@ import express, { json } from 'express';
 import { path, port } from './env';
 import cors from './middleware/cors';
 import session from './middleware/redis-session';
-import router from './routes/test';
+import router from './routes/router';
 
 // this app will only be used for main server
 // configuration, including initial middleware.

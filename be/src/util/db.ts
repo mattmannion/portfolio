@@ -1,22 +1,25 @@
-import { Pool } from 'pg';
+import pg from 'pg';
 
-const db = new Pool({ idleTimeoutMillis: 100 });
+export const db = new pg.Pool({ idleTimeoutMillis: 100 });
 
-export const dbq = async (query: string, rows: number | null = null) => {
-  // options are null, 0, false, 1, and true
-  // set the default value in params
+export async function dbq(
+  query: string,
+  array: string[],
+  rows: null | boolean | number = null
+): Promise<any> {
+  if (!Array.isArray(array)) array = [];
   if (rows === null)
-    return await db.query(query).catch(err => console.log(err));
-  if (!rows)
+    return await db.query(query, array).catch((err) => console.log(err));
+  if (rows === false || rows === 0)
     return await db
-      .query(query)
-      .then(res => res.rows[0])
-      .catch(err => console.log(err));
-  if (rows)
+      .query(query, array)
+      .then((res) => res.rows[0])
+      .catch((err) => console.log(err));
+  if (rows === true || rows === 1)
     return await db
-      .query(query)
-      .then(res => res.rows)
-      .catch(err => console.log(err));
-};
+      .query(query, array)
+      .then((res) => res.rows)
+      .catch((err) => console.log(err));
+}
 
 export default db;

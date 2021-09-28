@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Nav from './components/Nav';
+import Nav from './components/nav/Nav';
 import Home from './pages/Home/Home';
 
 export default function AppRouter() {
