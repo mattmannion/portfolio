@@ -20,15 +20,17 @@ export default function Home() {
   return (
     <>
       <div className='home'>Home</div>
-      {users
-        ? users.map((m, i) => (
-            <div key={i}>
-              <div>
-                {m.id}: {m.username}
-              </div>
+      {users ? (
+        users.map((m, i) => (
+          <div key={i}>
+            <div>
+              {m.id}: {m.username}
             </div>
-          ))
-        : 'no data'}
+          </div>
+        ))
+      ) : (
+        <div>Loading...</div>
+      )}
     </>
   );
 }

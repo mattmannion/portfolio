@@ -9,4 +9,5 @@ export default cors({
     if (whitelist.has(origin!)) return callback(null, true);
     else return callback(error, false);
   },
+  credentials: true,
 });
