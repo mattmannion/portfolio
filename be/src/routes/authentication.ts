@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import del_login from '../controllers/authentication/del_login';
-import get_login from '../controllers/authentication/get_login';
-import post_login from '../controllers/authentication/post_login';
+import { logout } from '../controllers/authentication/logout.del';
+import { get_login } from '../controllers/authentication/login.get';
+import { post_login } from '../controllers/authentication/login.post';
 
 const session = Router();
 
-session.route('/login').get(get_login).post(post_login).delete(del_login);
+session.route('/login').get(get_login).post(post_login).delete(logout);
 
 export default session;

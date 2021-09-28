@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import auth_check from '../middleware/auth/check_auth';
-import get_profile from '../controllers/users/get_profile';
-import get_users from '../controllers/users/get_users';
+import { get_profile } from '../controllers/users/profile.get';
+import { get_users } from '../controllers/users/users.get';
 
 const users = Router();
 

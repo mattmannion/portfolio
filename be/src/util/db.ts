@@ -1,6 +1,6 @@
-import pg from 'pg';
+import { Pool } from 'pg';
 
-export const db = new pg.Pool({ idleTimeoutMillis: 100 });
+export const db = new Pool({ idleTimeoutMillis: 100 });
 
 export async function dbq(
   query: string,

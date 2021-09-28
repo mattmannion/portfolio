@@ -3,7 +3,7 @@ import { login_query } from '../../sql/authentication.queries';
 import { dbq } from '../../util/db';
 import { logger } from '../../util/util';
 
-export default async function post_login(req: Request, res: Response) {
+export async function post_login(req: Request, res: Response) {
   logger(req);
 
   try {

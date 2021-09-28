@@ -8,6 +8,12 @@ export default function LoginBtn() {
       <button className='nav__login-btn' onClick={btnfn} onMouseDown={btnpd}>
         login
       </button>
+      <button className='nav__login-btn' onClick={btnfn} onMouseDown={btnpd}>
+        logout
+      </button>
+      <button className='nav__login-btn' onClick={btnfn} onMouseDown={btnpd}>
+        status
+      </button>
     </>
   );
 }

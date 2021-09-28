@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { logger } from '../../util/util';
 
-export default async function logout(req: Request, res: Response) {
+export async function logout(req: Request, res: Response) {
   logger(req);
 
   try {
