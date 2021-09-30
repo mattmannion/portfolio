@@ -11,7 +11,7 @@ const app = express();
 
 try {
   // if behind a proxy like nginx
-  // app.set('trust proxy', 1)
+  app.set('trust proxy', 1);
 
   // redis session
   app.use(session);
@@ -20,6 +20,7 @@ try {
   app.options('*', cors);
   app.use(cors);
   app.use(json());
+  app.disable('x-powered-by');
 
   // server router
   app.use(...router);

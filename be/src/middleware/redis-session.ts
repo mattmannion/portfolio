@@ -8,13 +8,17 @@ import {
   session_secret,
   session_age,
   session_name,
+  redis_password,
 } from '../env';
 
 const RedisStore = connectRedis(session);
 
+console.log('prod: ', prod);
+
 const redisClient = createClient({
   port: redis_port,
   host: redis_host,
+  password: redis_password,
 });
 
 export default session({
@@ -25,7 +29,8 @@ export default session({
   resave: false,
   cookie: {
     secure: prod,
-    httpOnly: false,
+    httpOnly: prod,
     maxAge: session_age,
+    sameSite: 'lax',
   },
 });

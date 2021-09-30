@@ -2,8 +2,5 @@
 import './sass/sass/index.scss';
 import { render } from 'react-dom';
 import Router from './Router';
-// import { axios_defaults } from './axios/authentication';
-
-// axios_defaults();
 
 render(<Router />, document.getElementById('root'));
