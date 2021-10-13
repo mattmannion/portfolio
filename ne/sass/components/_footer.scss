@@ -1,0 +1,9 @@
+.footer {
+  font-weight: 200;
+
+  @include centerFlex;
+  padding: 2rem 5rem;
+
+  background-color: rgba($black, 0.9);
+  color: white;
+}

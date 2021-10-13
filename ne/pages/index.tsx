@@ -12,9 +12,9 @@ export default function Home() {
           height='2160'
         />
         <div className='home__info'>
-          <h1>
+          <div>
             Fullstack <span className='home__accent'>Web</span> Developer
-          </h1>
+          </div>
         </div>
       </div>
     </>

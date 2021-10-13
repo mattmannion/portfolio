@@ -9,17 +9,21 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    opacity: 33%;
+    opacity: 20%;
 
     transition: all 0.2s;
   }
 
   &__info {
     @include fixedCenter;
-    font-size: 2rem;
+
+    text-align: center;
+    font-size: 5rem;
     font-weight: 400;
+
     color: white;
     background-color: rgba(white, 0.2);
+
     padding: 1rem 2rem;
     border-radius: 0.5rem;
   }

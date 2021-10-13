@@ -8,6 +8,47 @@ html {
 
   // replace these with your choice
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
+
+  // max - width
+  @include respond(phone-m) {
+    font-size: 30%;
+  }
+
+  @include respond(phone-s) {
+    font-size: 25%;
+  }
+
+  @include respond(phone-xs) {
+    font-size: 15%;
+  }
+
+  // min - width
+  @include respond(phone-m-min) {
+    font-size: 30%;
+  }
+
+  @include respond(tab) {
+    font-size: 35%;
+  }
+
+  @include respond(phone-l) {
+    font-size: 40%;
+  }
+
+  @include respond(fourthree) {
+    font-size: 45%;
+  }
+
+  @include respond(desktop-s) {
+    font-size: 55%;
+  }
+
+  @include respond(desktop) {
+    font-size: 62.5%;
+  }
+  @include respond(fourK) {
+    font-size: 100%;
+  }
 }
 
 body {
@@ -32,36 +73,3 @@ a {
     color: $near-black;
   }
 }
-
-// optional media queries
-// @include respond(fourK) {
-//   font-size: 150%;
-// }
-
-// @include respond(desktop) {
-//   font-size: 100%;
-// }
-
-// @include respond(desktop-s) {
-//   font-size: 90%;
-// }
-
-// @include respond(fourthree) {
-//   font-size: 85%;
-// }
-
-// @include respond(tab) {
-//   font-size: 100%;
-// }
-
-// @include respond(phone-m) {
-//   font-size: 55%;
-// }
-
-// @include respond(phone-s) {
-//   font-size: 45%;
-// }
-
-// @include respond(phone-xs) {
-//   font-size: 35%;
-// }

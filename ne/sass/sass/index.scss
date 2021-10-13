@@ -1,11 +1,12 @@
+@import '../abs/vars';
 @import '../abs/fade_in_kf';
 @import '../abs/mixin';
 @import '../abs/mq_manager';
-@import '../abs/vars';
 
 @import '../base/reset';
 @import '../base/typography';
 
+@import '../components/footer';
 @import '../components/nav';
 
 @import '../pages/home';
