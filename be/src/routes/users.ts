@@ -1,12 +1,12 @@
 import { Router } from 'express';
 import auth_check from '../middleware/auth/check_auth';
-import { get_profile } from '../controllers/users/profile.get';
-import { get_users } from '../controllers/users/users.get';
+import { GetProfile } from '../controllers/users/get.profile';
+import { GetUsers } from '../controllers/users/get.users';
 
 const users = Router();
 
-users.route('/users').get(get_users);
+users.route('/users').get(GetUsers);
 
-users.use(auth_check).route('/profile').get(get_profile);
+users.use(auth_check).route('/profile').get(GetProfile);
 
 export default users;

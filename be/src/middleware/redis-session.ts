@@ -13,8 +13,6 @@ import {
 
 const RedisStore = connectRedis(session);
 
-console.log('prod: ', prod);
-
 const redisClient = createClient({
   port: redis_port,
   host: redis_host,

@@ -1,13 +1,16 @@
 import cors from 'cors';
 import { whitelist } from '../env';
 
+// below is the original error I was sending
 const error: Error = <any>'Not Allowed By CORS';
+
+// const error: Error = <any>Error();
 
 export default cors({
   optionsSuccessStatus: 200,
-  origin: (origin, callback) => {
-    if (whitelist.has(origin!)) return callback(null, true);
-    else return callback(error, false);
+  origin: function (origin, callback) {
+    if (whitelist.has(origin!)) return callback(null, origin);
+    else return callback(error, origin);
   },
   credentials: true,
 });

@@ -4,7 +4,7 @@ const env = process.env;
 export const prod: boolean = env.NODE_ENV === 'prod' ? true : false;
 
 // ports and paths
-export const path: string = prod ? env.PATH! : 'http://localhost:';
+export const path: string = prod ? env.LOCATION! : 'http://localhost:';
 export const port: number = prod ? +env.PORT! : 7890;
 
 export const redis_port: number = prod ? +env.REDIS_PORT! : 6379;
@@ -18,7 +18,9 @@ export const session_secret: string = env.SESSION_SECRET!;
 
 // cors
 const prodlist = new Set([env.WL_1!, env.WL_2!]);
-const devlist = new Set(['http://localhost:3000', 'http://localhost:7890']);
+const devlist = new Set([
+  'http://localhost:3000',
+  'http://localhost:7890',
+  undefined,
+]);
 export const whitelist = prod ? prodlist : devlist;
-
-export default env;

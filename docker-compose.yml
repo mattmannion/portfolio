@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  next-app:
+    build:
+      context: ./ne
+      dockerfile: Dockerfile
+    container_name: next-app-cont
+    ports:
+      - 3000:3000
+    volumes:
+      - './ne:/usr/app'
+      - '/usr/app/node_modules'
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+  node-app:
+    build:
+      context: ./be
+      dockerfile: Dockerfile
+    container_name: node-app-cont
+    ports:
+      - 7890:7890
+    volumes:
+      - './be:/usr/app'
+      - '/usr/app/node_modules'
+  postgres:
+    image: postgres
+    restart: always
+    evironment:
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+    logging:
+      options:
+        max-size: 10m
+        max-file: '3'
+    ports:
+      - 5555:5432
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
