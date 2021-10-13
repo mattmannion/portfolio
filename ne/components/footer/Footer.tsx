@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <>
       <div className='footer'>
-        <p>Footer</p>
+        <p>&copy; 2021 - Matt Mannion</p>
       </div>
     </>
   );

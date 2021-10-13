@@ -2,4 +2,5 @@
 module.exports = {
   reactStrictMode: true,
   quiet: true,
+  webpack5: false
 };
