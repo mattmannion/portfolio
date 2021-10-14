@@ -1,23 +1,8 @@
-import Image from 'next/image';
-
-export default function Home() {
+import { Home } from '../app/home/Home';
+export default function IndexPage() {
   return (
     <>
-      <div className='home'>
-        <Image
-          className='home__image'
-          src='/images/home_hero_blur.jpg'
-          layout='intrinsic'
-          width='4096'
-          height='2160'
-          alt='computer screen with code'
-        />
-        <div className='home__info'>
-          <div>
-            Fullstack <span className='home__accent'>Web</span> Developer
-          </div>
-        </div>
-      </div>
+      <Home />
     </>
   );
 }

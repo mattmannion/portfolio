@@ -1,11 +1,10 @@
 .home {
-  @include centerFlex;
+  // @include centerFlex;
   background-color: $black;
   position: relative;
 
   &__image {
-    @include Fade-In(0.5s, 0.5s, 20%);
-    z-index: 1;
+    @include Fade-In(0.25s, 0.25s, 20%);
   }
 
   &__info {
@@ -20,7 +19,6 @@
 
     padding: 1rem 2rem;
     border-radius: 0.5rem;
-    z-index: 2;
   }
 
   &__accent {

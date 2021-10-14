@@ -9,7 +9,7 @@ $nav-accent: orangered;
 
   @include centerFlex;
   justify-content: space-between;
-  padding: 2rem 5rem;
+  padding: 1rem 5rem;
 
   background-color: rgba($black, 0.9);
   color: white;
@@ -26,7 +26,6 @@ $nav-accent: orangered;
     div {
       margin: 0rem 0.5rem;
       padding: 0rem 0.5rem;
-
       border-radius: 0.2rem;
 
       transition: all 0.25s;
@@ -41,11 +40,26 @@ $nav-accent: orangered;
   &__icons {
     font-size: 1.2rem;
 
-    @include centerFlex;
-    flex-flow: wrap;
+    @include centerGrid;
+    grid-template-columns: 1fr 1fr;
 
-    div {
+    a {
       margin-left: 1rem;
+
+      border-radius: 50%;
+
+      transition: all 0.25s;
+
+      &:hover {
+        background-color: crimson;
+      }
     }
+  }
+
+  &__github {
+    position: relative;
+    $size: 2rem;
+    height: $size;
+    width: $size;
   }
 }

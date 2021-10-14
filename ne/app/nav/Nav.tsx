@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
-
 const routes = {
   home: '/',
   projects: '/projects',
@@ -21,7 +21,7 @@ function accent(pathname: string, route: string) {
   else return '';
 }
 
-export default function Nav() {
+export function Nav() {
   const { pathname } = useRouter();
 
   return (
@@ -50,7 +50,11 @@ export default function Nav() {
         </div>
         <div className='nav__icons'>
           <div>resume</div>
-          <div>github</div>
+          <Link href='https://github.com/mattmannion' passHref>
+            <a className='nav__github' target='_blank' rel='noreferrer'>
+              <Image src='/icons/github_icon.png' layout='fill' />
+            </a>
+          </Link>
         </div>
       </nav>
     </>
