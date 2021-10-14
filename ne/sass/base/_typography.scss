@@ -11,11 +11,11 @@ html {
 
   // max - width
   @include respond(phone-m) {
-    font-size: 30%;
+    font-size: 20%;
   }
 
   @include respond(phone-s) {
-    font-size: 25%;
+    font-size: 20%;
   }
 
   @include respond(phone-xs) {
@@ -24,19 +24,19 @@ html {
 
   // min - width
   @include respond(phone-m-min) {
-    font-size: 30%;
+    font-size: 20%;
   }
 
   @include respond(tab) {
-    font-size: 35%;
+    font-size: 20%;
   }
 
   @include respond(phone-l) {
-    font-size: 40%;
+    font-size: 25%;
   }
 
   @include respond(fourthree) {
-    font-size: 45%;
+    font-size: 35%;
   }
 
   @include respond(desktop-s) {

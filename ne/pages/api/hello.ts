@@ -5,7 +5,7 @@ type Data = {
   name: string;
 };
 
-export default async function (
+export default async function handle(
   _req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {

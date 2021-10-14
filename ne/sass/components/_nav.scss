@@ -1,4 +1,10 @@
+$nav-accent: orangered;
+
 .nav {
+  &__accent {
+    color: $nav-accent;
+  }
+
   font-weight: 200;
 
   @include centerFlex;
@@ -15,7 +21,7 @@
     flex-flow: wrap;
 
     // transform fixes centering slightly
-    transform: translate(-10%, 0%);
+    transform: translate(-8%, 0%);
 
     div {
       margin: 0rem 0.5rem;
@@ -26,7 +32,7 @@
       transition: all 0.25s;
 
       &:hover {
-        color: crimson;
+        color: $nav-accent;
         background-color: rgba(white, 0.1);
       }
     }
@@ -41,9 +47,5 @@
     div {
       margin-left: 1rem;
     }
-  }
-
-  &__accent {
-    color: crimson;
   }
 }

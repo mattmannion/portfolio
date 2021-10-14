@@ -10,6 +10,7 @@ export default function Home() {
           layout='intrinsic'
           width='4096'
           height='2160'
+          alt='computer screen with code'
         />
         <div className='home__info'>
           <div>

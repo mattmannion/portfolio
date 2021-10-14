@@ -1,10 +1,6 @@
-import { useRouter } from 'next/router';
 import Link from 'next/link';
-
-function accent(pathname: string, route: string) {
-  if (pathname === route) return 'nav__accent';
-  else return '';
-}
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 const routes = {
   home: '/',
@@ -13,26 +9,42 @@ const routes = {
   contact: '/contact',
 };
 
+function location(pathname: string) {
+  if (pathname === routes.home) return 'Home';
+  if (pathname === routes.projects) return 'Projects';
+  if (pathname === routes.blog) return 'Blog';
+  if (pathname === routes.contact) return 'Contact';
+}
+
+function accent(pathname: string, route: string) {
+  if (pathname === route) return 'nav__accent';
+  else return '';
+}
+
 export default function Nav() {
   const { pathname } = useRouter();
 
   return (
     <>
+      <Head>
+        <title>{location(pathname)}</title>
+        <meta name='description' content="Matt Mannion's Portfolio and Blog." />
+      </Head>
       <nav className='nav'>
         <div className='nav__name'>
           <strong>Matt</strong> Mannion
         </div>
         <div className='nav__links'>
-          <Link href={routes.home}>
+          <Link href={routes.home} passHref>
             <div className={accent(pathname, routes.home)}>Home</div>
           </Link>
-          <Link href={routes.projects}>
+          <Link href={routes.projects} passHref>
             <div className={accent(pathname, routes.projects)}>Projects</div>
           </Link>
-          <Link href={routes.blog}>
+          <Link href={routes.blog} passHref>
             <div className={accent(pathname, routes.blog)}>Blog</div>
           </Link>
-          <Link href={routes.contact}>
+          <Link href={routes.contact} passHref>
             <div className={accent(pathname, routes.contact)}>Contact</div>
           </Link>
         </div>
