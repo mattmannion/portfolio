@@ -8,8 +8,8 @@ export function Home() {
           className='home__image'
           src='/images/home_hero_blur.jpg'
           layout='intrinsic'
-          width={854}
-          height={400}
+          width={4096}
+          height={2160}
           alt='computer screen with code'
         />
         <div className='home__info'>

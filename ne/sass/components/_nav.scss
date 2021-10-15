@@ -29,6 +29,7 @@ $nav-accent: orangered;
       border-radius: 0.2rem;
 
       transition: all 0.25s;
+      cursor: pointer;
 
       &:hover {
         color: $nav-accent;

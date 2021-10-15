@@ -10,16 +10,15 @@ html {
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
 
   // max - width
-  @include respond(phone-m) {
-    font-size: 20%;
-  }
 
   @include respond(phone-s) {
-    font-size: 20%;
-  }
-
-  @include respond(phone-xs) {
     font-size: 15%;
+  }
+  @include respond(phone-m) {
+    font-size: 10%;
+  }
+  @include respond(phone-xs) {
+    font-size: 10%;
   }
 
   // min - width
@@ -38,7 +37,6 @@ html {
   @include respond(fourthree) {
     font-size: 35%;
   }
-
   @include respond(desktop-s) {
     font-size: 55%;
   }
