@@ -46,17 +46,51 @@ $nav-accent: orangered;
     a {
       margin-left: 1rem;
 
-      border-radius: 50%;
-
       transition: all 0.25s;
 
       &:hover {
+        border-radius: 50%;
         background-color: crimson;
       }
     }
   }
 
+  &__resume {
+    background-color: white;
+    position: relative;
+    $size: 2rem;
+    height: $size;
+    width: $size;
+    border-radius: 0.2rem;
+    transition: all 0.25s;
+
+    cursor: pointer;
+
+    .resume__tooltip {
+      font-size: 1rem;
+      visibility: hidden;
+      width: 10rem;
+      background-color: black;
+      color: white;
+      text-align: center;
+      border-radius: 0.5rem;
+
+      position: absolute;
+      z-index: 1;
+      top: 125%;
+      left: -225%;
+    }
+
+    &:hover {
+      background-color: crimson;
+    }
+    &:hover .resume__tooltip {
+      visibility: visible;
+    }
+  }
+
   &__github {
+    border-radius: 50%;
     position: relative;
     $size: 2rem;
     height: $size;

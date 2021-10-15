@@ -49,10 +49,21 @@ export function Nav() {
           </Link>
         </div>
         <div className='nav__icons'>
-          <div>resume</div>
+          <div className='nav__resume'>
+            <Image
+              src='/icons/resume_icon.png'
+              layout='fill'
+              alt='download resume icon'
+            />
+            <span className='resume__tooltip'>Download Resume</span>
+          </div>
           <Link href='https://github.com/mattmannion' passHref>
             <a className='nav__github' target='_blank' rel='noreferrer'>
-              <Image src='/icons/github_icon.png' layout='fill' />
+              <Image
+                src='/icons/github_icon.png'
+                layout='fill'
+                alt='github icon'
+              />
             </a>
           </Link>
         </div>

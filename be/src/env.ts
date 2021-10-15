@@ -21,6 +21,6 @@ const prodlist = new Set([env.WL_1!, env.WL_2!]);
 const devlist = new Set([
   'http://localhost:3000',
   'http://localhost:7890',
-  undefined,
+    undefined,
 ]);
 export const whitelist = prod ? prodlist : devlist;
