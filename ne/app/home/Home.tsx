@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { About } from './about/About';
 
 export function Home() {
   return (
@@ -9,7 +10,7 @@ export function Home() {
           src='/images/home_hero_blur.jpg'
           layout='intrinsic'
           width={4096}
-          height={1800}
+          height={1960}
           alt='computer screen with code'
         />
         <div className='home__info'>
@@ -18,6 +19,7 @@ export function Home() {
           </div>
         </div>
       </div>
+      <About />
     </>
   );
 }

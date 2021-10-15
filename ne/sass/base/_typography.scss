@@ -10,33 +10,35 @@ html {
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
 
   // max - width
-
   @include respond(phone-s) {
+    font-size: 20%;
+  }
+
+  @include respond(phone-m) {
     font-size: 15%;
   }
-  @include respond(phone-m) {
-    font-size: 10%;
-  }
+
   @include respond(phone-xs) {
     font-size: 10%;
   }
 
   // min - width
   @include respond(phone-m-min) {
-    font-size: 20%;
-  }
-
-  @include respond(tab) {
-    font-size: 20%;
+    font-size: 30%;
   }
 
   @include respond(phone-l) {
-    font-size: 25%;
+    font-size: 40%;
+  }
+
+  @include respond(tab) {
+    font-size: 50%;
   }
 
   @include respond(fourthree) {
-    font-size: 35%;
+    font-size: 55%;
   }
+
   @include respond(desktop-s) {
     font-size: 55%;
   }
@@ -44,6 +46,7 @@ html {
   @include respond(desktop) {
     font-size: 62.5%;
   }
+
   @include respond(fourK) {
     font-size: 100%;
   }
