@@ -9,7 +9,7 @@ export function Home() {
           src='/images/home_hero_blur.jpg'
           layout='intrinsic'
           width={4096}
-          height={2160}
+          height={1800}
           alt='computer screen with code'
         />
         <div className='home__info'>
