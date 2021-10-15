@@ -8,9 +8,9 @@ export function About() {
       <main className='about'>
         {/* section a */}
         <div className='about__item'>
-          <div>
+          <div className='about__body'>
             <div className='about__title'>About Me</div>
-            <p className='about__body'>
+            <p className='about__text'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
               optio tempora nostrum vero, sed neque dolor unde! Quod, delectus
               odio blanditiis rem ducimus cum ipsam voluptates quam impedit quia
@@ -34,12 +34,12 @@ export function About() {
               src='/icons/projects_icon.png'
               layout='intrinsic'
               height={image_size}
-              width={image_size * 1.1}
+              width={image_size * 1.2}
             />
           </div>
-          <div>
+          <div className='about__body'>
             <div className='about__title'>My Work</div>
-            <p className='about__body'>
+            <p className='about__text'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
               optio tempora nostrum vero, sed neque dolor unde! Quod, delectus
               odio blanditiis rem ducimus cum ipsam voluptates quam impedit quia
@@ -50,9 +50,9 @@ export function About() {
 
         {/* section C */}
         <div className='about__item'>
-          <div>
+          <div className='about__body'>
             <div className='about__title'>My Blog</div>
-            <p className='about__body'>
+            <p className='about__text'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
               optio tempora nostrum vero, sed neque dolor unde! Quod, delectus
               odio blanditiis rem ducimus cum ipsam voluptates quam impedit quia

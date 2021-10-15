@@ -1,4 +1,4 @@
-$about_size: 17.5rem;
+$about_size: 15rem;
 .about {
   background-color: #eee;
   padding: 5rem 25vw;
@@ -7,17 +7,20 @@ $about_size: 17.5rem;
   &__item {
     @include centerGrid;
     grid-template-columns: 1fr 1fr;
+  }
 
-    gap: 5vw;
+  &__body {
+    margin: 5rem;
   }
 
   &__title {
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: crimson;
   }
 
-  &__body {
+  &__text {
+    font-size: 1rem;
     font-weight: 500;
   }
 
