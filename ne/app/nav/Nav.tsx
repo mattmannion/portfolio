@@ -51,7 +51,7 @@ export function Nav() {
         <div className='nav__icons'>
           <div className='nav__resume'>
             <Image
-              src='/icons/resume_icon.png'
+              src='/icons/download_resume.png'
               layout='fill'
               alt='download resume icon'
             />

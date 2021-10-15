@@ -24,11 +24,11 @@ html {
 
   // min - width
   @include respond(phone-m-min) {
-    font-size: 30%;
+    font-size: 20%;
   }
 
   @include respond(phone-l) {
-    font-size: 40%;
+    font-size: 25%;
   }
 
   @include respond(tab) {

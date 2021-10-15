@@ -1,21 +1,29 @@
+$about_size: 17.5rem;
 .about {
-  @include centerGrid;
-  grid-template-columns: 1fr 1fr;
   background-color: #eee;
-  padding: 0rem 25vw;
-  font-size: 1rem;
+  padding: 5rem 25vw;
+  padding-bottom: 5rem;
 
-  &__grid-item {
-    margin: 2vw;
+  &__item {
+    @include centerGrid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 5vw;
   }
 
   &__title {
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: 700;
     color: crimson;
   }
 
   &__body {
     font-weight: 500;
+  }
+
+  &__image {
+    position: relative;
+    height: $about_size;
+    width: $about_size;
   }
 }
