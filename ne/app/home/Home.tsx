@@ -7,7 +7,7 @@ export function Home() {
         <Image
           className='home__image'
           src='/images/home_hero_blur.jpg'
-          layout='responsive'
+          layout='intrinsic'
           width={854}
           height={400}
           alt='computer screen with code'
