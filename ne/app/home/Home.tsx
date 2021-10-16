@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import { About } from './about/About';
+import { About } from './About';
+import { AfterAbout } from './AfterAbout';
 
 export function Home() {
   return (
@@ -20,6 +21,7 @@ export function Home() {
         </div>
       </div>
       <About />
+      <AfterAbout />
     </>
   );
 }

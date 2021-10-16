@@ -6,8 +6,11 @@
 @import '../base/reset';
 @import '../base/typography';
 
+@import '../components/buttons';
 @import '../components/footer';
 @import '../components/nav';
 
 @import '../pages/about';
+@import '../pages/after_about';
+@import '../pages/contact';
 @import '../pages/home';

@@ -4,7 +4,8 @@
   position: relative;
 
   &__image {
-    @include Fade-In(0.25s, 0.25s, 20%);
+    // @include Fade-In(0.25s, 0.25s, 20%);
+    opacity: 20%;
   }
 
   &__info {

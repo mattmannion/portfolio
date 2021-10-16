@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { AccentLink } from '../../components/AccentLink';
 
 const image_size = 400;
 
@@ -7,7 +8,7 @@ export function About() {
     <>
       <main className='about'>
         {/* section a */}
-        <div className='about__item'>
+        <section className='about__item'>
           <div className='about__body'>
             <div className='about__title'>About Me</div>
             <p className='about__text'>
@@ -23,18 +24,20 @@ export function About() {
               layout='intrinsic'
               height={image_size}
               width={image_size}
+              alt='About Icon'
             />
           </div>
-        </div>
+        </section>
 
-        {/* section b */}
-        <div className='about__item'>
+        {/* section b - Projects*/}
+        <section className='about__item'>
           <div className='about__image'>
             <Image
               src='/icons/projects_icon.png'
               layout='intrinsic'
               height={image_size}
               width={image_size * 1.2}
+              alt='Project Icon'
             />
           </div>
           <div className='about__body'>
@@ -45,11 +48,12 @@ export function About() {
               odio blanditiis rem ducimus cum ipsam voluptates quam impedit quia
               facere!
             </p>
+            <AccentLink HREF='/projects' name='Go &rarr;' />
           </div>
-        </div>
+        </section>
 
-        {/* section C */}
-        <div className='about__item'>
+        {/* section C - Blog*/}
+        <section className='about__item'>
           <div className='about__body'>
             <div className='about__title'>My Blog</div>
             <p className='about__text'>
@@ -58,6 +62,7 @@ export function About() {
               odio blanditiis rem ducimus cum ipsam voluptates quam impedit quia
               facere!
             </p>
+            <AccentLink HREF='/blog' name='Go &rarr;' />
           </div>
           <div className='about__image'>
             <Image
@@ -65,9 +70,10 @@ export function About() {
               layout='intrinsic'
               height={image_size}
               width={image_size}
+              alt='Blog Icon'
             />
           </div>
-        </div>
+        </section>
       </main>
     </>
   );

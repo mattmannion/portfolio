@@ -1,0 +1,16 @@
+.after {
+  @include centerFlex;
+  flex-flow: column;
+  background-color: #ddd;
+
+  padding: 10rem 0rem;
+
+  &__contact {
+    text-align: center;
+
+    font-size: 3rem;
+    font-weight: 700;
+
+    margin-bottom: 5rem;
+  }
+}
