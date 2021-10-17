@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import { AccentLink } from '../../components/AccentLink';
+import { project_path } from '../../data/ProjectData';
 interface ProjectCardIF {
-  name: string;
   img: string;
   title: string;
   desc: string;
+  slug: string;
 }
-export function ProjectCard({ name, img, title, desc }: ProjectCardIF) {
+export function ProjectCard({ img, title, desc, slug }: ProjectCardIF) {
   return (
     <section className='project-card'>
       <Image src={img} layout='intrinsic' height={1400} width={2400} />
@@ -15,7 +16,7 @@ export function ProjectCard({ name, img, title, desc }: ProjectCardIF) {
         <p className='project-card__desc'>{desc}</p>
       </article>
       <div className='project-card__button'>
-        <AccentLink name='Go &rarr;' HREF={'/projects/' + name} />
+        <AccentLink name='Go &rarr;' HREF={project_path + slug} />
       </div>
     </section>
   );
