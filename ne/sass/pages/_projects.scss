@@ -12,15 +12,14 @@ $project-margin: 5rem;
 }
 
 .project-card {
-  // @include centerFlex;
-  // flex-flow: column;
-
   border: 0.1rem solid black;
   width: 50rem;
 
   margin: $project-margin 0rem;
 
   &__title {
+    font-size: 3rem;
+    font-weight: 700;
     text-align: center;
     margin-bottom: 2rem;
   }

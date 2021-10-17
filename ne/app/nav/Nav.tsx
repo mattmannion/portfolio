@@ -52,7 +52,9 @@ export function Nav() {
           <div className='nav__resume'>
             <Image
               src='/icons/download_resume.png'
-              layout='fill'
+              layout='intrinsic'
+              height={50}
+              width={50}
               alt='download resume icon'
             />
             <span className='resume__tooltip'>Download Resume</span>
@@ -61,7 +63,9 @@ export function Nav() {
             <a className='nav__github' target='_blank' rel='noreferrer'>
               <Image
                 src='/icons/github_icon.png'
-                layout='fill'
+                layout='intrinsic'
+                height={50}
+                width={50}
                 alt='github icon'
               />
             </a>

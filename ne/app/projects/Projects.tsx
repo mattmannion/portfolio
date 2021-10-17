@@ -7,9 +7,15 @@ export function ProjectsMain() {
     <main className='projects'>
       <h1 className='projects__title'>Projects</h1>
       <div className='projects__container'>
-        {ProjectData.map(({ img, title, desc, slug }: ProjectDataIF) => (
+        {ProjectData.map(({ img, alt, title, desc, slug }: ProjectDataIF) => (
           <Fragment key={slug}>
-            <ProjectCard img={img} title={title} desc={desc} slug={slug} />
+            <ProjectCard
+              img={img}
+              alt={alt}
+              title={title}
+              desc={desc}
+              slug={slug}
+            />
           </Fragment>
         ))}
       </div>
