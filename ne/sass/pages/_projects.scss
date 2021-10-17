@@ -1,0 +1,27 @@
+.projects {
+  @include centerFlex;
+  flex-flow: column;
+
+  padding-bottom: 10rem;
+
+  &__title {
+    padding: 2.5rem 0rem;
+    color: crimson;
+  }
+
+  &__container {
+    background-color: #ccc;
+  }
+}
+
+.project-card {
+  @include centerFlex;
+  flex-flow: column;
+
+  border: 0.1rem solid black;
+  width: 50rem;
+
+  &__title {
+    color: crimson;
+  }
+}
