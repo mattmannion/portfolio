@@ -1,27 +1,42 @@
+$project-margin: 5rem;
 .projects {
   @include centerFlex;
   flex-flow: column;
 
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
 
   &__title {
-    padding: 2.5rem 0rem;
+    margin-top: $project-margin;
     color: crimson;
-  }
-
-  &__container {
-    background-color: #ccc;
   }
 }
 
 .project-card {
-  @include centerFlex;
-  flex-flow: column;
+  // @include centerFlex;
+  // flex-flow: column;
 
   border: 0.1rem solid black;
   width: 50rem;
 
+  margin: $project-margin 0rem;
+
   &__title {
-    color: crimson;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__body {
+    padding: 2rem;
+  }
+
+  &__desc {
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+  }
+
+  &__button {
+    @include centerFlex;
+    margin: 1rem 0rem;
   }
 }
