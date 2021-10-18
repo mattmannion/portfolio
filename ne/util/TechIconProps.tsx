@@ -17,15 +17,7 @@ export type TechChoices =
   | 'typescript';
 
 interface TechIF {
-  expressjs: TechChoices;
-  go: TechChoices;
-  mongodb: TechChoices;
-  nextjs: TechChoices;
-  nodejs: TechChoices;
-  postgres: TechChoices;
-  react: TechChoices;
-  sass: TechChoices;
-  typescript: TechChoices;
+  [key: string]: TechChoices;
 }
 
 export const tech: TechIF = {
