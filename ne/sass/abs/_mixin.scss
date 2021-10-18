@@ -62,3 +62,8 @@
   width: $size * 16;
   height: $size * 9;
 }
+
+@mixin Square($size) {
+  width: $size;
+  height: $size;
+}

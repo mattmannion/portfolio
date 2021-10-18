@@ -1,24 +1,49 @@
-$project_img_size: 7rem;
+$project_img_size: 5rem;
 
 .project {
-  @include centerFlex;
-  flex-flow: column;
   margin: 5rem;
+  margin-bottom: 10rem;
+  height: 80rem;
 
   &__title {
+    text-align: center;
     color: crimson;
   }
 
-  &__img-cont {
+  &__body {
+    font-size: 1.4rem;
+
+    @include centerFlex;
+    flex-flow: column;
+  }
+
+  &__img-container {
     @include SixteenByNine($project_img_size);
     margin: 2.5rem;
   }
 
-  &__body {
-    border: 0.1rem solid black;
-  }
-
   &__info-container {
     padding: 2.5rem;
+
+    @include centerGrid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  &__tech {
+    li {
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+  &__tech-icon {
+    @include Square(2rem);
+  }
+
+  &__links {
+    @include centerFlex;
+    flex-flow: column;
   }
 }

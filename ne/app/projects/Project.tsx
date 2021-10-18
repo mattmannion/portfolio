@@ -1,13 +1,16 @@
-import { ProjectDataIF, TechType } from '../../data/ProjectData';
+import { ProjectDataIF } from '../../data/ProjectData';
 import Image from 'next/image';
 import { SixteenByNine } from '../../util/util';
+import { TechChoices, TechIconProps } from '../../util/TechIconProps';
 
-function TechIcons({ name, icon }: TechType) {
+function TechList({ tech }: { tech: TechChoices }) {
   return (
-    <div>
-      {name}
-      {icon}
-    </div>
+    <>
+      <div className='project__tech-icon'>
+        <Image {...TechIconProps(tech)} />
+      </div>
+      <p>{tech}</p>
+    </>
   );
 }
 
@@ -18,13 +21,13 @@ export function Project({
   desc,
   github,
   host,
-  techStack,
+  tech,
 }: ProjectDataIF) {
   return (
     <main className='project'>
       <h1 className='project__title'>{title}</h1>
       <section className='project__body'>
-        <div className='project__img-cont'>
+        <div className='project__img-container'>
           <Image
             src={img}
             alt={alt}
@@ -35,13 +38,17 @@ export function Project({
         <article className='project__info-container'>
           <div className='project__desc'>{desc}</div>
           <ul className='project__tech'>
-            {techStack.map((tech, i) => (
+            {tech.sort().map((tech, i) => (
               <li key={i}>
-                <TechIcons {...tech} />
+                <TechList tech={tech} />
               </li>
             ))}
           </ul>
         </article>
+        <div className='project__links'>
+          <div className='project__host'>{host}</div>
+          <div className='project__github'>{github}</div>
+        </div>
       </section>
     </main>
   );

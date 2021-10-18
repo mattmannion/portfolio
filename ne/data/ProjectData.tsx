@@ -1,7 +1,4 @@
-export type TechType = {
-  name: string;
-  icon: string;
-};
+import { TechChoices } from '../util/TechIconProps';
 
 export interface ProjectDataIF {
   img: string;
@@ -10,7 +7,7 @@ export interface ProjectDataIF {
   desc: string;
   github: string;
   host: string;
-  techStack: TechType[];
+  tech: TechChoices[];
   slug: string;
 }
 
@@ -24,18 +21,9 @@ export const ProjectData: ProjectDataIF[] = [
     alt: 'test project',
     title: 'Test Project 1',
     desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima hic eius debitis sed unde? Veritatis, eligendi consequuntur. Libero, pariatur tempore.',
-    github: '#',
-    host: '#',
-    techStack: [
-      {
-        name: 'typescript',
-        icon: '',
-      },
-      {
-        name: 'sass',
-        icon: '',
-      },
-    ],
+    github: 'https://github.com/mattmannion/portfolio',
+    host: 'https://mattmannion.com',
+    tech: ['typescript', 'sass'],
   },
   {
     slug: 'test-project-2',
@@ -43,17 +31,8 @@ export const ProjectData: ProjectDataIF[] = [
     alt: 'test project 2',
     title: 'Test Project 2',
     desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima hic eius debitis sed unde? Veritatis, eligendi consequuntur. Libero, pariatur tempore.',
-    github: '#',
-    host: '#',
-    techStack: [
-      {
-        name: 'typescript',
-        icon: '',
-      },
-      {
-        name: 'sass',
-        icon: '',
-      },
-    ],
+    github: 'https://github.com/mattmannion/portfolio',
+    host: 'https://mattmannion.com',
+    tech: ['mongodb', 'golang'],
   },
 ];
