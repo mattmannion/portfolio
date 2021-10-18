@@ -1,0 +1,24 @@
+$project_img_size: 7rem;
+
+.project {
+  @include centerFlex;
+  flex-flow: column;
+  margin: 5rem;
+
+  &__title {
+    color: crimson;
+  }
+
+  &__img-cont {
+    @include SixteenByNine($project_img_size);
+    margin: 2.5rem;
+  }
+
+  &__body {
+    border: 0.1rem solid black;
+  }
+
+  &__info-container {
+    padding: 2.5rem;
+  }
+}
