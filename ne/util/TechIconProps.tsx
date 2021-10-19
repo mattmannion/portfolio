@@ -5,7 +5,7 @@ const path = '/icons/';
 const svg = '_icon.svg';
 const png = '_icon.png';
 
-export type TechChoices =
+export type tech =
   | 'expressjs'
   | 'golang'
   | 'mongodb'
@@ -16,90 +16,55 @@ export type TechChoices =
   | 'sass'
   | 'typescript';
 
-interface TechIF {
-  [key: string]: TechChoices;
+function ImgFmt(tech: tech, fmt: 'png' | 'svg'): ImageProps {
+  switch (fmt) {
+    case 'png':
+      return {
+        src: path + tech + png,
+        alt: tech,
+        layout: 'intrinsic',
+        width: size,
+        height: size,
+      };
+
+    case 'svg':
+      return {
+        src: path + tech + svg,
+        alt: tech,
+        layout: 'intrinsic',
+        width: size,
+        height: size,
+      };
+  }
 }
 
-export const tech: TechIF = {
-  expressjs: 'expressjs',
-  go: 'golang',
-  mongodb: 'mongodb',
-  nextjs: 'nextjs',
-  nodejs: 'nodejs',
-  postgres: 'postgres',
-  react: 'react',
-  sass: 'sass',
-  typescript: 'typescript',
-};
-
-type LayoutValue = 'fill' | 'fixed' | 'intrinsic' | 'responsive' | undefined;
-
-interface ImgSettingsIF {
-  layout: LayoutValue;
-  width: number;
-  height: number;
-}
-
-const ImgSettings: ImgSettingsIF = {
-  layout: 'intrinsic',
-  width: size,
-  height: size,
-};
-
-export function TechIconProps(tech_name: TechChoices): ImageProps {
+export function TechIconProps(tech_name: tech): ImageProps {
   switch (tech_name) {
-    case tech.expressjs:
-      return {
-        src: path + tech.expressjs + png,
-        alt: tech.expressjs,
-        ...ImgSettings,
-      };
+    case 'expressjs':
+      return { ...ImgFmt('expressjs', 'png') };
 
-    case tech.go:
-      return { src: path + tech.go + svg, alt: tech.go, ...ImgSettings };
+    case 'golang':
+      return { ...ImgFmt('golang', 'svg') };
 
-    case tech.mongodb:
-      return {
-        src: path + tech.mongodb + svg,
-        alt: tech.mongodb,
-        ...ImgSettings,
-      };
+    case 'mongodb':
+      return { ...ImgFmt('mongodb', 'svg') };
 
-    case tech.nextjs:
-      return {
-        src: path + tech.nextjs + svg,
-        alt: tech.nextjs,
-        ...ImgSettings,
-      };
+    case 'nextjs':
+      return { ...ImgFmt('nextjs', 'svg') };
 
-    case tech.nodejs:
-      return {
-        src: path + tech.nodejs + svg,
-        alt: tech.nodejs,
-        ...ImgSettings,
-      };
+    case 'nodejs':
+      return { ...ImgFmt('nodejs', 'svg') };
 
-    case tech.postgres:
-      return {
-        src: path + tech.postgres + svg,
-        alt: tech.postgres,
-        ...ImgSettings,
-      };
+    case 'postgres':
+      return { ...ImgFmt('postgres', 'svg') };
 
-    case tech.react:
-      return { src: path + tech.react + svg, alt: tech.react, ...ImgSettings };
+    case 'react':
+      return { ...ImgFmt('react', 'svg') };
 
-    case tech.sass:
-      return { src: path + tech.sass + svg, alt: tech.sass, ...ImgSettings };
+    case 'sass':
+      return { ...ImgFmt('sass', 'svg') };
 
-    case tech.typescript:
-      return {
-        src: path + tech.typescript + svg,
-        alt: tech.typescript,
-        ...ImgSettings,
-      };
-
-    default:
-      return { src: path + 'about_me' + png, alt: 'about_me', ...ImgSettings };
+    case 'typescript':
+      return { ...ImgFmt('typescript', 'svg') };
   }
 }

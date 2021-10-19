@@ -2,8 +2,6 @@ $project_img_size: 5rem;
 
 .project {
   margin: 5rem;
-  margin-bottom: 10rem;
-  height: 80rem;
 
   &__title {
     text-align: center;
@@ -26,7 +24,7 @@ $project_img_size: 5rem;
     padding: 2.5rem;
 
     @include centerGrid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 9fr 1fr;
   }
 
   &__tech {
@@ -43,6 +41,7 @@ $project_img_size: 5rem;
   }
 
   &__links {
+    height: 30vh;
     @include centerFlex;
     flex-flow: column;
   }

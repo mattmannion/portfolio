@@ -1,4 +1,4 @@
-import { TechChoices } from '../util/TechIconProps';
+import { tech } from '../util/TechIconProps';
 
 export interface ProjectDataIF {
   img: string;
@@ -7,7 +7,7 @@ export interface ProjectDataIF {
   desc: string;
   github: string;
   host: string;
-  tech: TechChoices[];
+  tech: tech[];
   slug: string;
 }
 

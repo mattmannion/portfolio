@@ -1,9 +1,9 @@
 import { ProjectDataIF } from '../../data/ProjectData';
 import Image from 'next/image';
 import { SixteenByNine } from '../../util/util';
-import { TechChoices, TechIconProps } from '../../util/TechIconProps';
+import { tech, TechIconProps } from '../../util/TechIconProps';
 
-function TechList({ tech }: { tech: TechChoices }) {
+function TechList({ tech }: { tech: tech }) {
   return (
     <>
       <div className='project__tech-icon'>
