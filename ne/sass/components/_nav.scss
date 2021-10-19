@@ -58,6 +58,7 @@ $icon_size: 2rem;
   }
 
   &__resume {
+    visibility: hidden;
     position: relative;
     height: $icon_size;
     width: $icon_size;

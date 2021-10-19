@@ -1,7 +1,7 @@
 export function Blog() {
   return (
-    <>
-      <div></div>
-    </>
+    <div className='blog'>
+      <div>under contruction...</div>
+    </div>
   );
 }
