@@ -2,6 +2,7 @@ import { ProjectDataIF } from '../../data/ProjectData';
 import Image from 'next/image';
 import { SixteenByNine } from '../../util/util';
 import { tech, TechIconProps } from '../../util/TechIconProps';
+import { AccentLink } from '../../components/AccentLink';
 
 function TechList({ tech }: { tech: tech }) {
   return (
@@ -46,8 +47,20 @@ export function Project({
           </ul>
         </article>
         <div className='project__links'>
-          <div className='project__host'>{host}</div>
-          <div className='project__github'>{github}</div>
+          <div className='project__host'>
+            <AccentLink
+              HREF={host}
+              name='Live Project &nbsp; &rarr;'
+              target='_blank'
+            />
+          </div>
+          <div className='project__github'>
+            <AccentLink
+              HREF={github}
+              name='Github Repo &rarr;'
+              target='_blank'
+            />
+          </div>
         </div>
       </section>
     </main>

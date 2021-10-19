@@ -11,10 +11,18 @@ interface ProjectCardIF {
 export function ProjectCard({ img, alt, title, desc, slug }: ProjectCardIF) {
   return (
     <section className='project-card'>
-      <Image src={img} layout='intrinsic' height={576} width={1024} alt={alt} />
+      <div className='project-card__image'>
+        <Image
+          src={img}
+          layout='intrinsic'
+          height={576}
+          width={1024}
+          alt={alt}
+        />
+      </div>
       <article className='project-card__body'>
         <div className='project-card__title'>{title}</div>
-        <p className='project-card__desc'>{desc}</p>
+        <p className='project-card__desc'>{desc.substr(0, 150) + '...'}</p>
       </article>
       <div className='project-card__button'>
         <AccentLink name='Go &rarr;' HREF={project_path + slug} />

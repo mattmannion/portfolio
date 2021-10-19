@@ -1,4 +1,4 @@
-$project-margin: 5rem;
+$project-margin: 4rem;
 .projects {
   @include centerFlex;
   flex-flow: column;
@@ -13,6 +13,7 @@ $project-margin: 5rem;
 
 .project-card {
   border: 0.1rem solid black;
+  padding: 0.2rem;
   width: 50rem;
 
   margin: $project-margin 0rem;
