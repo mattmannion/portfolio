@@ -16,6 +16,16 @@ export const images = '/images/';
 
 export const ProjectData: ProjectDataIF[] = [
   {
+    slug: 'tic-tac-toe',
+    img: images + 'ttt.png',
+    alt: 'tic-tac-toe snapshot',
+    title: 'Simple Tic-Tac-Toe Game',
+    desc: `Simple Tic-Tac-Toe Game made with Typescript. No websockets used or anything, just a game where two people can play eachother with one screen. Works best with a smartphone or tablet.`,
+    github: 'https://github.com/mattmannion/tictactoe',
+    host: 'https://tictactoe-game-mm.netlify.app/',
+    tech: ['typescript', 'sass'],
+  },
+  {
     slug: 'portfolio-site',
     img: images + 'home_hero.jpg',
     alt: 'Portfolio snapshot',
