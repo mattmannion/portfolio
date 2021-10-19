@@ -12,10 +12,13 @@ export function About() {
           <div className='about__body'>
             <div className='about__title'>About Me</div>
             <p className='about__text'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              optio tempora nostrum vero, sed neque dolor unde! Quod, delectus
-              odio blanditiis rem ducimus cum ipsam voluptates quam impedit quia
-              facere!
+              Hi, my name is Matt Mannion. I have been programming for over 10
+              years as a hobby and professionally for 1. I started with C,
+              however these days my favorite technologies to work with are
+              Typscript, React, Node, Express, and Sass. Currently I am learning
+              Golang. Please check out my projects and Blog(when live...). Feel
+              free to use the Contact page to reach out to me. Thanks for
+              visiting my website!
             </p>
           </div>
           <div className='about__image'>
@@ -41,12 +44,13 @@ export function About() {
             />
           </div>
           <div className='about__body'>
-            <div className='about__title'>My Work</div>
+            <div className='about__title'>Projects</div>
             <p className='about__text'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              optio tempora nostrum vero, sed neque dolor unde! Quod, delectus
-              odio blanditiis rem ducimus cum ipsam voluptates quam impedit quia
-              facere!
+              This is a list of all my favorite projects I have worked on over
+              the past year in Web Development. Each including, but not limited
+              to: React, Typescript, Node, Postgres, and more. All projects
+              include links to their respective Github Repo along with a small
+              description and a list of the tech employed on each project.
             </p>
             <AccentLink HREF='/projects' name='Go &rarr;' />
           </div>
@@ -55,12 +59,12 @@ export function About() {
         {/* section C - Blog*/}
         <section className='about__item'>
           <div className='about__body'>
-            <div className='about__title'>My Blog</div>
+            <div className='about__title'>Blog</div>
             <p className='about__text'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              optio tempora nostrum vero, sed neque dolor unde! Quod, delectus
-              odio blanditiis rem ducimus cum ipsam voluptates quam impedit quia
-              facere!
+              Coming Soon... I plan on posting Guides on Programming, Guitar
+              tip, and maybe some general Music. Topics on how to Use Typescript
+              with React and Express will the main focus point in the short
+              term.
             </p>
             <AccentLink HREF='/blog' name='Go &rarr;' />
           </div>
