@@ -29,6 +29,8 @@ export function Nav() {
       <Head>
         <title>{location(pathname)}</title>
         <meta name='description' content="Matt Mannion's Portfolio and Blog." />
+        {/* <link rel='icon' href='/portfolio_icon.png' /> */}
+        <link rel='icon' href='/icons/about_me_icon.png' />
       </Head>
       <nav className='nav'>
         <div className='nav__name'>

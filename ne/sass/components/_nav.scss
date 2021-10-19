@@ -1,5 +1,5 @@
 $nav-accent: orangered;
-$icon_size: 2rem;
+$icon_size: 2.5rem;
 
 .nav {
   &__accent {
@@ -16,13 +16,13 @@ $icon_size: 2rem;
   color: white;
 
   &__links {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 
     @include centerFlex;
     flex-flow: wrap;
 
     // transform fixes centering slightly
-    transform: translate(-13%);
+    transform: translate(-12%);
 
     div {
       margin: 0rem 0.5rem;
@@ -40,7 +40,7 @@ $icon_size: 2rem;
   }
 
   &__icons {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 
     @include centerGrid;
     grid-template-columns: 1fr 1fr;

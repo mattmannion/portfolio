@@ -1,6 +1,11 @@
 @mixin respond($breakpoint) {
   @if $breakpoint==fourK {
-    @media screen and (min-width: 2560px) {
+    @media screen and (min-width: 3000px) {
+      @content;
+    }
+  }
+  @if $breakpoint==twoK {
+    @media screen and (min-width: 2500px) {
       @content;
     }
   }

@@ -50,7 +50,7 @@ export function About() {
               the past year in Web Development. Each including, but not limited
               to: React, Typescript, Node, Postgres, and more. All projects
               include links to their respective Github Repo along with a small
-              description and a list of the tech employed on each project.
+              description and a list of the tech employed.
             </p>
             <AccentLink HREF='/projects' name='Go &rarr;' />
           </div>
@@ -61,10 +61,9 @@ export function About() {
           <div className='about__body'>
             <div className='about__title'>Blog</div>
             <p className='about__text'>
-              Coming Soon... I plan on posting Guides on Programming, Guitar
-              tip, and maybe some general Music. Topics on how to Use Typescript
-              with React and Express will the main focus point in the short
-              term.
+              Coming Soon... I plan on posting Guides on Programming, Guitar,
+              and Music Theory. Topics on how to use Typescript with React and
+              Express will the main focus point in the short term.
             </p>
             <AccentLink HREF='/blog' name='Go &rarr;' />
           </div>
