@@ -22,7 +22,7 @@ export function ProjectCard({ img, alt, title, desc, slug }: ProjectCardIF) {
       </div>
       <article className='project-card__body'>
         <div className='project-card__title'>{title}</div>
-        <p className='project-card__desc'>{desc.substr(0, 150) + '...'}</p>
+        <p className='project-card__desc'>{desc.substr(0, 200) + '...'}</p>
       </article>
       <div className='project-card__button'>
         <AccentLink name='Go &rarr;' HREF={project_path + slug} />

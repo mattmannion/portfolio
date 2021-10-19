@@ -1,6 +1,6 @@
-export function Blog() {
+export function Blogs() {
   return (
-    <div className='blog'>
+    <div className='blogs'>
       <div>under contruction...</div>
     </div>
   );

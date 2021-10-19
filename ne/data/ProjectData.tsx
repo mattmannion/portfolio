@@ -29,14 +29,4 @@ export const ProjectData: ProjectDataIF[] = [
     host: 'https://mattmannion.com',
     tech: ['typescript', 'sass', 'expressjs', 'nextjs', 'react'],
   },
-  {
-    slug: 'test-project-2',
-    img: images + 'home_hero.jpg',
-    alt: 'test project 2',
-    title: 'Test Project 2',
-    desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima hic eius debitis sed unde? Veritatis, eligendi consequuntur. Libero, pariatur tempore.',
-    github: 'https://github.com/mattmannion/portfolio',
-    host: 'https://mattmannion.com',
-    tech: ['mongodb', 'golang'],
-  },
 ];
