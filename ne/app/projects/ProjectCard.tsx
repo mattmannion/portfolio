@@ -15,8 +15,8 @@ export function ProjectCard({ img, alt, title, desc, slug }: ProjectCardIF) {
         <Image
           src={img}
           layout='intrinsic'
-          height={576}
-          width={1024}
+          height={900}
+          width={1600}
           alt={alt}
         />
       </div>

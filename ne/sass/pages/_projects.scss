@@ -9,6 +9,12 @@ $project-margin: 4rem;
     margin-top: $project-margin;
     color: crimson;
   }
+
+  &__container {
+    @include centerGrid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+  }
 }
 
 .project-card {
