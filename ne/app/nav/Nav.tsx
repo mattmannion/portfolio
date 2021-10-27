@@ -51,7 +51,7 @@ export function Nav() {
           </Link>
         </div>
         <div className='nav__icons'>
-          <div className='nav__resume'>
+          <div className='nav__resume' title='Download My Resume'>
             <Image
               src='/icons/download_resume.png'
               layout='intrinsic'
@@ -59,10 +59,14 @@ export function Nav() {
               width={50}
               alt='download resume icon'
             />
-            <span className='resume__tooltip'>Download Resume</span>
           </div>
           <Link href='https://github.com/mattmannion' passHref>
-            <a className='nav__github' target='_blank' rel='noreferrer'>
+            <a
+              className='nav__github'
+              target='_blank'
+              rel='noreferrer'
+              title='To My Github'
+            >
               <Image
                 src='/icons/github_icon.png'
                 layout='intrinsic'
