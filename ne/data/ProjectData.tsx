@@ -12,7 +12,7 @@ export interface ProjectDataIF {
 }
 
 export const project_path = '/projects/';
-export const images = '/images/';
+const images = '/images/';
 
 export const ProjectData: ProjectDataIF[] = [
   {
