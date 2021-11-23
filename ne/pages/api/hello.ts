@@ -10,6 +10,6 @@ export default async function handle(
   res: NextApiResponse<Data>
 ) {
   res.status(200).json({
-    name: 'John Doe',
+    name: 'Hello',
   });
 }

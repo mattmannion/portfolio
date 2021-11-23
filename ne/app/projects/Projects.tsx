@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
-import { ProjectData, ProjectDataIF } from '../../data/ProjectData';
-import { ProjectCard } from './ProjectCard';
+import { ProjectData, ProjectDataIF } from '/data/ProjectData';
+import { ProjectCard } from '/app/projects/ProjectCard';
 
 export function ProjectsMain() {
   return (

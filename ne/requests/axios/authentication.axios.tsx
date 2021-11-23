@@ -1,7 +1,7 @@
 // import axios from 'axios';
 import axios, { AxiosRequestConfig } from 'axios';
 import Cookies from 'universal-cookie';
-import { api, cookie_name } from '../../env';
+import { api, cookie_name } from '/env';
 
 const auth_path = api + '/login';
 

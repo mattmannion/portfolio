@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import { ProjectDataIF } from '../../data/ProjectData';
+import { ProjectDataIF } from '/data/ProjectData';
 import Image from 'next/image';
-import { SixteenByNine } from '../../util/util';
-import { tech, TechIconProps } from '../../util/TechIconProps';
-import { AccentLink } from '../../components/AccentLink';
+import { SixteenByNine } from '/util/util';
+import { tech, TechIconProps } from '/util/TechIconProps';
+import { AccentLink } from '/components/AccentLink';
 
 function TechList({ tech }: { tech: tech }) {
   return (
