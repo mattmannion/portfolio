@@ -1,0 +1,40 @@
+@use 'scss' as s;
+
+.home {
+  @include s.Fade-In;
+  margin-bottom: -0.8rem;
+  position: relative;
+
+  .img {
+    position: relative;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 99%;
+    width: 100%;
+    opacity: 70%;
+    background-color: s.$black;
+  }
+
+  .info {
+    @include s.fixedCenter;
+
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+
+    color: white;
+    background-color: rgba(white, 0.25);
+
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+  }
+
+  .accent {
+    color: orangered;
+    font-weight: 700;
+  }
+}

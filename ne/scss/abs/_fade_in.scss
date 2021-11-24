@@ -1,4 +1,4 @@
-@mixin Fade-In($value, $timer, $opacity) {
+@mixin Fade-In($value: 0.5s, $timer: 0.5s, $opacity: 1) {
   @-webkit-keyframes fadeIn {
     from {
       opacity: 0;
@@ -46,8 +46,4 @@
     -moz-animation-duration: $timer;
     animation-duration: $timer;
   }
-}
-
-.fade-in-effect {
-  @include Fade-In(0.5s, 0.5s, 1);
 }

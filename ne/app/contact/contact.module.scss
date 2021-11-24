@@ -1,0 +1,14 @@
+@use 'scss' as s;
+
+.contact {
+  @include s.Fade-In;
+  @include s.centerGrid;
+  grid-template-columns: 1fr 1fr;
+  align-items: baseline;
+
+  background: linear-gradient(120deg, white, #aaa);
+  height: 85vh;
+
+  padding: 0rem 15rem;
+  padding-top: 5rem;
+}

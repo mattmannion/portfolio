@@ -1,29 +1,31 @@
+@use 'scss' as s;
+
 $nav-accent: orangered;
 $icon_size: 2.5rem;
 
 .nav {
+  position: relative;
+
   &__accent {
     color: $nav-accent;
   }
 
   font-weight: 200;
 
-  @include centerFlex;
+  @include s.centerFlex;
   justify-content: space-between;
   padding: 1rem 5rem;
 
-  background-color: rgba($black, 0.9);
+  background-color: rgba(s.$black, 0.9);
   color: white;
 
   &__links {
+    @include s.fixedCenter;
     font-size: 1.4rem;
     font-weight: 500;
 
-    @include centerFlex;
+    @include s.centerFlex;
     flex-flow: wrap;
-
-    // transform fixes centering slightly
-    transform: translate(-12%);
 
     div {
       margin: 0rem 0.5rem;
@@ -43,7 +45,7 @@ $icon_size: 2.5rem;
   &__icons {
     font-size: 1.4rem;
 
-    @include centerGrid;
+    @include s.centerGrid;
     grid-template-columns: 1fr 1fr;
 
     a {

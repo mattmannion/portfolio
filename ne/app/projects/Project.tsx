@@ -1,3 +1,4 @@
+import s from './project.module.scss';
 import Head from 'next/head';
 import { ProjectDataIF } from '/data/ProjectData';
 import Image from 'next/image';
@@ -8,7 +9,7 @@ import { AccentLink } from '/components/AccentLink';
 function TechList({ tech }: { tech: tech }) {
   return (
     <>
-      <div className='project__tech-icon'>
+      <div className={s.techIcon}>
         <Image {...TechIconProps(tech)} />
       </div>
       <p>{tech}</p>
@@ -32,10 +33,10 @@ export function Project({
         <meta name='description' content="Matt Mannion's Portfolio and Blog." />
         <link rel='icon' href='/icons/about_me_icon.png' />
       </Head>
-      <main className='project'>
-        <h1 className='project__title'>{title}</h1>
-        <section className='project__body'>
-          <div className='project__img-container'>
+      <main className={s.project}>
+        <h1 className={s.title}>{title}</h1>
+        <section className={s.body}>
+          <div className={s.imgContainer}>
             <Image
               src={img}
               alt={alt}
@@ -43,9 +44,9 @@ export function Project({
               {...SixteenByNine(160)}
             />
           </div>
-          <article className='project__info-container'>
-            <div className='project__desc'>{desc}</div>
-            <ul className='project__tech'>
+          <article className={s.infoContainer}>
+            <div className={s.desc}>{desc}</div>
+            <ul className={s.tech}>
               {tech.sort().map((tech, i) => (
                 <li key={i}>
                   <TechList tech={tech} />
@@ -53,15 +54,15 @@ export function Project({
               ))}
             </ul>
           </article>
-          <div className='project__links'>
-            <div className='project__host'>
+          <div className={s.links}>
+            <div className={s.host}>
               <AccentLink
                 HREF={host}
                 name='Live Project &nbsp; &rarr;'
                 target='_blank'
               />
             </div>
-            <div className='project__github'>
+            <div className={s.github}>
               <AccentLink
                 HREF={github}
                 name='Github Repo &rarr;'

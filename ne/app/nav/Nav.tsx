@@ -1,3 +1,4 @@
+import s from './nav.module.scss';
 import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -18,7 +19,7 @@ function location(pathname: string) {
 }
 
 function accent(pathname: string, route: string) {
-  if (pathname === route) return 'nav__accent';
+  if (pathname === route) return s.nav__accent;
   else return '';
 }
 
@@ -32,11 +33,11 @@ export function Nav() {
         <meta name='description' content="Matt Mannion's Portfolio and Blog." />
         <link rel='icon' href='/icons/about_me_icon.png' />
       </Head>
-      <nav className='nav'>
-        <div className='nav__name'>
+      <nav className={s.nav}>
+        <div className={s.nav__name}>
           <strong>Matt</strong> Mannion
         </div>
-        <div className='nav__links'>
+        <div className={s.nav__links}>
           <Link href={routes.home} passHref>
             <div className={accent(pathname, routes.home)}>Home</div>
           </Link>
@@ -50,8 +51,8 @@ export function Nav() {
             <div className={accent(pathname, routes.contact)}>Contact</div>
           </Link>
         </div>
-        <div className='nav__icons'>
-          <div className='nav__resume' title='Download My Resume'>
+        <div className={s.nav__icons}>
+          <div className={s.nav__resume} title='Download My Resume'>
             <Image
               src='/icons/download_resume.png'
               layout='intrinsic'
@@ -62,7 +63,7 @@ export function Nav() {
           </div>
           <Link href='https://github.com/mattmannion' passHref>
             <a
-              className='nav__github'
+              className={s.nav__github}
               target='_blank'
               rel='noreferrer'
               title='To My Github'

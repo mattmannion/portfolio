@@ -1,0 +1,30 @@
+@use 'scss' as s;
+
+.projectCard {
+  border: 0.1rem solid black;
+  padding: 0.2rem;
+  width: 50rem;
+
+  margin: s.$project-margin 0rem;
+
+  .title {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .body {
+    padding: 2rem;
+  }
+
+  .desc {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+  }
+
+  .button {
+    @include s.centerFlex;
+    margin: 1rem 0rem;
+  }
+}

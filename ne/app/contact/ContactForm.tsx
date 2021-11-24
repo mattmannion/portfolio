@@ -1,3 +1,4 @@
+import s from './contactForm.module.scss';
 import axios from 'axios';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
@@ -9,7 +10,7 @@ interface ErrorIF {
 
 function Error({ error, touched }: ErrorIF) {
   return (
-    <div className='contact__error'>
+    <div className={s.error}>
       {error && touched ? <div>Required</div> : <div>&nbsp;</div>}
     </div>
   );
@@ -54,68 +55,68 @@ export function ContactForm() {
   });
 
   return (
-    <form className='contact__form' onSubmit={handleSubmit}>
-      <h1 className='contact__title'>Contact Me!</h1>
-      <div className='contact__item'>
+    <form className={s.form} onSubmit={handleSubmit}>
+      <h1 className={s.title}>Contact Me!</h1>
+      <div className={s.item}>
         <input
-          type='text'
+          type={s.text}
           name='firstname'
           placeholder='First Name'
-          className=''
+          className={s.inputField}
           onChange={handleChange}
           value={values.firstname}
           onBlur={handleBlur}
         />
         <Error error={errors.firstname} touched={touched.firstname} />
       </div>
-      <div className='contact__item'>
+      <div className={s.item}>
         <input
           type='text'
           name='lastname'
           placeholder='Last Name'
-          className=''
+          className={s.inputField}
           onChange={handleChange}
           value={values.lastname}
           onBlur={handleBlur}
         />
         <Error error={errors.lastname} touched={touched.lastname} />
       </div>
-      <div className='contact__item'>
+      <div className={s.item}>
         <input
           type='email'
           name='email'
           placeholder='Email'
-          className=''
+          className={s.inputField}
           onChange={handleChange}
           value={values.email}
           onBlur={handleBlur}
         />
         <Error error={errors.email} touched={touched.email} />
       </div>
-      <div className='contact__item'>
+      <div className={s.item}>
         <input
           type='text'
           name='subject'
           placeholder='Subject'
-          className=''
+          className={s.inputField}
           onChange={handleChange}
           value={values.subject}
           onBlur={handleBlur}
         />
         <Error error={errors.subject} touched={touched.subject} />
       </div>
-      <div className='contact__item'>
+      <div className={s.item}>
         <textarea
           name='message'
           placeholder='Message'
-          className=''
+          className={s.inputField}
           onChange={handleChange}
           value={values.message}
           onBlur={handleBlur}
         />
         <Error error={errors.message} touched={touched.message} />
       </div>
-      <button className='accent-button' type='submit'>
+      <button className={s.accentButton} type='submit'>
         submit
       </button>
     </form>

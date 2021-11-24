@@ -1,11 +1,13 @@
+@use 'scss' as s;
+
 .after {
-  @include centerFlex;
+  @include s.centerFlex;
   flex-flow: column;
   background-color: #ddd;
 
   padding: 5rem 0rem;
 
-  &__contact {
+  .contact {
     text-align: center;
 
     font-size: 3rem;

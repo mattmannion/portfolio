@@ -4,11 +4,7 @@ import { Project } from '/app/projects/Project';
 import { ProjectData, ProjectDataIF } from '/data/ProjectData';
 
 export default function ProjectPage(props: ProjectDataIF) {
-  return (
-    <div className='fade-in-effect'>
-      <Project {...props} />
-    </div>
-  );
+  return <Project {...props} />;
 }
 
 //////////////////////////////

@@ -1,0 +1,8 @@
+@use 'scss' as s;
+
+.blogs {
+  @include s.Fade-In;
+  @include s.centerFlex;
+
+  height: 85vh;
+}

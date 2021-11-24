@@ -1,0 +1,77 @@
+@use 'scss' as s;
+
+.title {
+  font-size: 3rem;
+  color: crimson;
+
+  margin-bottom: 2rem;
+}
+
+.inputField {
+  width: 125%;
+  padding: 0.25rem;
+  border-radius: 0rem;
+  border: 1px solid black;
+  background-color: #eee;
+  font-size: 1.6rem;
+
+  transition: all 0.2s;
+
+  &:focus,
+  &:active {
+    background-color: white;
+    outline: none;
+  }
+
+  &::placeholder {
+    font-weight: 500;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+
+.form {
+  @include s.centerFlex;
+  flex-flow: column;
+}
+
+.item {
+  @include s.centerFlex;
+  flex-flow: column;
+  margin: 0rem 0.5rem;
+  width: 100%;
+
+  textarea {
+    height: 10rem;
+    resize: none;
+  }
+}
+
+.error {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  color: crimson;
+  margin-bottom: 0.25rem;
+}
+
+.accentButton {
+  font-size: 1.8rem;
+
+  color: white;
+  background-color: crimson;
+
+  border: 0.1rem solid black;
+  border-radius: 5rem;
+
+  padding: 0.25rem 1rem;
+
+  cursor: pointer;
+
+  transition: all 0.25s;
+
+  &:hover {
+    background-color: transparent;
+    color: black;
+  }
+}
