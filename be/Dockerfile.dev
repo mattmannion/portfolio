@@ -10,4 +10,4 @@ COPY . .
 
 RUN npm i -g npm-run-all rimraf typescript nodemon 
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "dd"]
