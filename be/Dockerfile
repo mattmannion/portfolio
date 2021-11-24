@@ -4,8 +4,10 @@ WORKDIR /usr/app
 
 COPY package.json .
 
-RUN npm install
+RUN npm i
 
 COPY . .
 
-CMD ["npm", "start"]
+RUN npm i -g npm-run-all rimraf typescript nodemon 
+
+CMD ["npm", "run", "dd"]

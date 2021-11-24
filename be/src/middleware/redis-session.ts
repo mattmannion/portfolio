@@ -26,9 +26,8 @@ export default session({
   saveUninitialized: false,
   resave: false,
   cookie: {
-    secure: prod,
+    secure: false,
     httpOnly: prod,
     maxAge: session_age,
-    sameSite: 'lax',
   },
 });

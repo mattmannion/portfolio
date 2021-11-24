@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <>
       <div className={s.footer}>
-        <p>&copy; 2021 - Matt Mannion</p>
+        <p>&copy; {new Date().getFullYear()} - Matt Mannion</p>
       </div>
     </>
   );
