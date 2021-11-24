@@ -47,6 +47,8 @@ services:
     volumes:
       - './be:/usr/app'
       - '/usr/app/node_modules'
+    environment:
+      - TYPEORM_LOGGING=true
     depends_on:
       - redis
       - postgres

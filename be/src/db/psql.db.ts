@@ -1,6 +1,14 @@
 import { Pool } from 'pg';
+import { pg } from '../env';
 
-export const db = new Pool({ idleTimeoutMillis: 100 });
+export const db = new Pool({
+  idleTimeoutMillis: 100,
+  user: pg.username,
+  host: pg.host,
+  database: pg.database,
+  password: pg.password,
+  port: pg.port,
+});
 
 export async function dbq(
   query: string,

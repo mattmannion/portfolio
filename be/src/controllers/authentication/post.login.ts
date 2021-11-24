@@ -21,11 +21,12 @@ export async function PostLogin(req: Request, res: Response) {
         message: 'you have logged in',
         status: 'success',
       });
-    } else
-      res.status(204).json({
+    } else {
+      res.status(202).json({
         message: 'incorrect username or password',
         status: 'success',
       });
+    }
   } catch (error) {
     console.log(error);
   }

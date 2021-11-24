@@ -2,32 +2,27 @@ import { createClient } from 'redis';
 import connectRedis from 'connect-redis';
 import session from 'express-session';
 import {
-  prod,
-  redis_host,
-  redis_port,
-  session_secret,
-  session_age,
-  session_name,
-  redis_password,
+  redis,
+  // prod
 } from '../env';
 
 const RedisStore = connectRedis(session);
 
 const redisClient = createClient({
-  port: redis_port,
-  host: redis_host,
-  password: redis_password,
+  host: redis.host,
+  port: redis.port,
+  password: redis.password,
 });
 
 export default session({
   store: new RedisStore({ client: redisClient }),
-  name: session_name,
-  secret: session_secret,
-  saveUninitialized: false,
-  resave: false,
   cookie: {
     secure: false,
-    httpOnly: prod,
-    maxAge: session_age,
+    httpOnly: false,
+    maxAge: redis.session.age,
   },
+  name: redis.session.name,
+  secret: redis.session.secret,
+  saveUninitialized: false,
+  resave: false,
 });

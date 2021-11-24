@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next build && yarn install --production=true && next start",
+    "start": "next build && next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -20,9 +20,9 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
-    "@types/react": "17.0.29",
     "@types/node": "^16.11.6",
     "@types/nodemailer": "^6.4.4",
+    "@types/react": "^17.0.36",
     "eslint": "^7.32.0",
     "eslint-config-next": "11.1.2",
     "sass": "^1.43.4",
