@@ -1,13 +1,11 @@
-FROM node:alpine
+FROM node:14-alpine
 
 WORKDIR /usr/app
 
 COPY package.json .
 
-RUN npm i
+RUN yarn
 
 COPY . .
-
-RUN npm i -g npm-run-all rimraf typescript nodemon 
 
 CMD ["npm", "run", "start"]
