@@ -1,29 +1,27 @@
 version: '3.8'
 services:
   redis:
-    container_name: redis-dev
+    container_name: redis-stage
     image: redis:6.2-alpine
-    ports:
-      - 6379:6379
     command: redis-server
     restart: on-failure
+
   postgres:
-    container_name: postgres-dev
-    image: postgres
+    container_name: postgres
+    image: postgres-stage
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: portfolio
-    ports:
-      - '5432:5432'
     volumes:
       - ./pgdata:/var/lib/data
     restart: on-failure
+
   next:
-    container_name: next-dev
+    container_name: next-stage
     build:
       context: ./ne
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     ports:
       - 3000:3000
     volumes:
@@ -37,18 +35,19 @@ services:
     links:
       - redis
       - postres
+
   node:
-    container_name: node-dev
+    container_name: node-stage
     build:
       context: ./be
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     ports:
       - 7890:7890
     volumes:
       - './be:/usr/app'
       - '/usr/app/node_modules'
     environment:
-      - TYPEORM_LOGGING=true
+      - TYPEORM_LOGGING=false
     depends_on:
       - redis
       - postgres

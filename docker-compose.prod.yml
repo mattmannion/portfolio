@@ -1,12 +1,16 @@
 version: '3.8'
 services:
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:80
+
   redis:
     container_name: redis
     image: redis:6.2-alpine
-    ports:
-      - 6379:6379
     command: redis-server
     restart: on-failure
+
   postgres:
     container_name: postgres
     image: postgres
@@ -14,36 +18,34 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: portfolio
-    ports:
-      - '5432:5432'
     volumes:
       - ./pgdata:/var/lib/data
     restart: on-failure
-  next-app:
-    container_name: next-app
+
+  next:
+    container_name: next
     build:
       context: ./ne
       dockerfile: Dockerfile
-    ports:
-      - 3000:3000
     volumes:
       - './ne:/usr/app'
       - '/usr/app/node_modules'
     environment:
       - CHOKIDAR_USEPOLLING=true
     depends_on:
+      - nginx
       - redis
       - postgres
     links:
+      - nginx
       - redis
       - postres
-  node-app:
-    container_name: node-app
+
+  node:
+    container_name: node
     build:
       context: ./be
       dockerfile: Dockerfile
-    ports:
-      - 7890:7890
     volumes:
       - './be:/usr/app'
       - '/usr/app/node_modules'
