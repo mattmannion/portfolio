@@ -3,3 +3,5 @@ be/.env
 be/app/build
 
 node_modules
+
+pgdata
