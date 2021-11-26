@@ -1,5 +1,10 @@
 version: '3.8'
 services:
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:80
+
   redis:
     container_name: redis-stage
     image: redis:6.2-alpine
@@ -7,8 +12,8 @@ services:
     restart: on-failure
 
   postgres:
-    container_name: postgres
-    image: postgres-stage
+    container_name: postgres-stage
+    image: postgres
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres

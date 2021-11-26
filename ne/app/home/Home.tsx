@@ -13,7 +13,7 @@ export function Home() {
             priority
             layout='intrinsic'
             width={4096}
-            height={1960}
+            height={2000}
             alt='computer screen with code'
           />
           <div className={s.overlay} />

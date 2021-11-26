@@ -13,7 +13,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 99%;
+    // this height is set this way from a bug in prod
+    height: 99.4%;
     width: 100%;
     opacity: 70%;
     background-color: s.$black;
