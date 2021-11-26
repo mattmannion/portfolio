@@ -54,11 +54,3 @@ services:
     links:
       - redis
       - postres
-
-  nginx:
-    container_name: nginx-stage
-    build: ./nginx
-    ports:
-      - 80:80
-    depends_on:
-      - next
