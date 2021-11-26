@@ -1,10 +1,5 @@
 version: '3.8'
 services:
-  nginx:
-    build: ./nginx
-    ports:
-      - 80:80
-
   redis:
     container_name: redis-stage
     image: redis:6.2-alpine
@@ -21,6 +16,25 @@ services:
     volumes:
       - ./pgdata:/var/lib/data
     restart: on-failure
+
+  node:
+    container_name: node-stage
+    build:
+      context: ./be
+      dockerfile: Dockerfile
+    ports:
+      - 7890:7890
+    volumes:
+      - './be:/usr/app'
+      - '/usr/app/node_modules'
+    environment:
+      - TYPEORM_LOGGING=false
+    depends_on:
+      - redis
+      - postgres
+    links:
+      - redis
+      - postgres
 
   next:
     container_name: next-stage
@@ -41,21 +55,9 @@ services:
       - redis
       - postres
 
-  node:
-    container_name: node-stage
-    build:
-      context: ./be
-      dockerfile: Dockerfile
+  nginx:
+    build: ./nginx
     ports:
-      - 7890:7890
-    volumes:
-      - './be:/usr/app'
-      - '/usr/app/node_modules'
-    environment:
-      - TYPEORM_LOGGING=false
+      - 80:80
     depends_on:
-      - redis
-      - postgres
-    links:
-      - redis
-      - postgres
+      - next

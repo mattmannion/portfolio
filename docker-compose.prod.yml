@@ -1,11 +1,5 @@
 version: '3.8'
 services:
-  nginx:
-    build: ./nginx
-    ports:
-      - 80:80
-      - 443:433
-
   redis:
     container_name: redis
     image: redis:6.2-alpine
@@ -23,25 +17,6 @@ services:
       - ./pgdata:/var/lib/data
     restart: on-failure
 
-  next:
-    container_name: next
-    build:
-      context: ./ne
-      dockerfile: Dockerfile
-    volumes:
-      - './ne:/usr/app'
-      - '/usr/app/node_modules'
-    environment:
-      - CHOKIDAR_USEPOLLING=true
-    depends_on:
-      - nginx
-      - redis
-      - postgres
-    links:
-      - nginx
-      - redis
-      - postres
-
   node:
     container_name: node
     build:
@@ -58,3 +33,28 @@ services:
     links:
       - redis
       - postgres
+
+  next:
+    container_name: next
+    build:
+      context: ./ne
+      dockerfile: Dockerfile
+    volumes:
+      - './ne:/usr/app'
+      - '/usr/app/node_modules'
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    depends_on:
+      - redis
+      - postgres
+    links:
+      - redis
+      - postres
+
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:80
+      - 443:433
+    depends_on:
+      - next

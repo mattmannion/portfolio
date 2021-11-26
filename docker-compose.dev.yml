@@ -7,6 +7,7 @@ services:
       - 6379:6379
     command: redis-server
     restart: on-failure
+
   postgres:
     container_name: postgres-dev
     image: postgres
@@ -19,24 +20,7 @@ services:
     volumes:
       - ./pgdata:/var/lib/data
     restart: on-failure
-  next:
-    container_name: next-dev
-    build:
-      context: ./ne
-      dockerfile: Dockerfile.dev
-    ports:
-      - 3000:3000
-    volumes:
-      - './ne:/usr/app'
-      - '/usr/app/node_modules'
-    environment:
-      - CHOKIDAR_USEPOLLING=true
-    depends_on:
-      - redis
-      - postgres
-    links:
-      - redis
-      - postres
+
   node:
     container_name: node-dev
     build:
@@ -55,3 +39,22 @@ services:
     links:
       - redis
       - postgres
+
+  next:
+    container_name: next-dev
+    build:
+      context: ./ne
+      dockerfile: Dockerfile.dev
+    ports:
+      - 3000:3000
+    volumes:
+      - './ne:/usr/app'
+      - '/usr/app/node_modules'
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    depends_on:
+      - redis
+      - postgres
+    links:
+      - redis
+      - postres
