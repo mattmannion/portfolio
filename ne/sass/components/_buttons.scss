@@ -1,7 +1,26 @@
-@use 'scss' as s;
+.accent-button {
+  font-size: 1.8rem;
 
-.accentLink {
-  @include s.centerFlex;
+  color: white;
+  background-color: crimson;
+
+  border: 0.1rem solid black;
+  border-radius: 5rem;
+
+  padding: 0.25rem 1rem;
+
+  cursor: pointer;
+
+  transition: all 0.25s;
+
+  &:hover {
+    background-color: transparent;
+    color: black;
+  }
+}
+
+.accent-link {
+  @include centerFlex;
 
   &__button {
     background-color: crimson;

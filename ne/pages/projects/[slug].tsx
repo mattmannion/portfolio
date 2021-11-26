@@ -1,10 +1,14 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
-import { Project } from '/app/projects/Project';
-import { ProjectData, ProjectDataIF } from '/data/ProjectData';
+import { Project } from '../../app/projects/Project';
+import { ProjectData, ProjectDataIF } from '../../data/ProjectData';
 
 export default function ProjectPage(props: ProjectDataIF) {
-  return <Project {...props} />;
+  return (
+    <div className='fade-in-effect'>
+      <Project {...props} />
+    </div>
+  );
 }
 
 //////////////////////////////

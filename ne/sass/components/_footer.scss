@@ -1,12 +1,10 @@
-@use 'scss' as s;
-
 .footer {
   font-size: 1.4rem;
   font-weight: 200;
 
-  @include s.centerFlex;
+  @include centerFlex;
   padding: 2rem 5rem;
 
-  background-color: rgba(s.$black, 0.9);
+  background-color: rgba($black, 0.9);
   color: white;
 }

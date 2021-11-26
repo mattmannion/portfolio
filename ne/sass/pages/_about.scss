@@ -1,29 +1,26 @@
-@use 'scss' as s;
 $about_size: 15rem;
-
 .about {
   background-color: #eee;
   padding: 5rem 15vw;
   padding-bottom: 5rem;
-  z-index: 100;
 
-  .item {
-    @include s.centerGrid;
+  &__item {
+    @include centerGrid;
     grid-template-columns: 1fr 1fr;
   }
 
-  .body {
+  &__body {
     margin: 4rem;
   }
 
-  .title {
+  &__title {
     font-size: 2.5rem;
     font-weight: 700;
     color: crimson;
     text-align: center;
   }
 
-  .text {
+  &__text {
     font-size: 1.2rem;
     font-weight: 500;
     letter-spacing: 0.05rem;
@@ -31,7 +28,7 @@ $about_size: 15rem;
     margin-bottom: 2rem;
   }
 
-  .image {
+  &__image {
     position: relative;
     height: $about_size;
     width: $about_size;

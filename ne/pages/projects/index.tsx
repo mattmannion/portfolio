@@ -1,5 +1,9 @@
-import { ProjectsMain } from '/app/projects/Projects';
+import { ProjectsMain } from '../../app/projects/Projects';
 
 export default function ProjectsPage() {
-  return <ProjectsMain />;
+  return (
+    <div className='fade-in-effect'>
+      <ProjectsMain />
+    </div>
+  );
 }

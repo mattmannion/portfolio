@@ -1,5 +1,5 @@
-export function btnpd(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-  event.preventDefault();
+export function btnpd(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+  e.preventDefault();
 }
 
 export function SixteenByNine(pixels: number) {

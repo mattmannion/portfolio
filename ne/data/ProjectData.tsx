@@ -1,4 +1,4 @@
-import { tech } from '/util/TechIconProps';
+import { tech } from '../util/TechIconProps';
 
 export interface ProjectDataIF {
   slug: string;

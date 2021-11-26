@@ -1,4 +1,3 @@
-import s from './accentLink.module.scss';
 import Link from 'next/link';
 
 interface AccentButtonIF {
@@ -9,9 +8,9 @@ interface AccentButtonIF {
 
 export function AccentLink({ HREF, name, target }: AccentButtonIF) {
   return (
-    <div className={s.accentLink}>
+    <div className='accent-link'>
       <Link href={HREF} passHref>
-        <a className={s.accentLink__button} target={!target ? '' : '_blank'}>
+        <a className='accent-link__button' target={!target ? '' : '_blank'}>
           {name}
         </a>
       </Link>

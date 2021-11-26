@@ -1,13 +1,12 @@
-import s from './projects.module.scss';
 import { Fragment } from 'react';
-import { ProjectData, ProjectDataIF } from '/data/ProjectData';
-import { ProjectCard } from '/app/projects/ProjectCard';
+import { ProjectData, ProjectDataIF } from '../../data/ProjectData';
+import { ProjectCard } from './ProjectCard';
 
 export function ProjectsMain() {
   return (
-    <main className={s.projects}>
-      <h1 className={s.title}>Projects</h1>
-      <div className={s.container}>
+    <main className='projects'>
+      <h1 className='projects__title'>Projects</h1>
+      <div className='projects__container'>
         {ProjectData.map(({ img, alt, title, desc, slug }: ProjectDataIF) => (
           <Fragment key={slug}>
             <ProjectCard

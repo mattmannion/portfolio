@@ -1,5 +1,13 @@
-import { Contact } from '/app/contact/Contact';
+import { ContactForm } from '../app/contact/ContactForm';
+import { ContactInfo } from '../app/contact/ContactInfo';
 
 export default function ContactPage() {
-  return <Contact />;
+  return (
+    <div className='fade-in-effect'>
+      <div className='contact'>
+        <ContactForm />
+        <ContactInfo />
+      </div>
+    </div>
+  );
 }

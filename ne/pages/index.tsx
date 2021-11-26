@@ -1,5 +1,8 @@
-import { Home } from '/app/home/Home';
-
+import { Home } from '../app/home/Home';
 export default function IndexPage() {
-  return <Home />;
+  return (
+    <div className='fade-in-effect'>
+      <Home />
+    </div>
+  );
 }

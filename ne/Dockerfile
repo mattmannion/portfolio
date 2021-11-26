@@ -1,13 +1,12 @@
+
 FROM node:14-alpine
 
 WORKDIR /usr/app
 
-RUN yarn global add pm2
-
 COPY package.json .
 
-RUN yarn
+RUN npm install
 
 COPY . .
 
-CMD ["pm2-runtime", "npm", "--", "start"]
+CMD ["npm", "run", "dev"]

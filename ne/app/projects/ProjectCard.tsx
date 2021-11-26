@@ -1,7 +1,6 @@
-import s from './projectCard.module.scss';
 import Image from 'next/image';
-import { AccentLink } from '/components/AccentLink';
-import { project_path } from '/data/ProjectData';
+import { AccentLink } from '../../components/AccentLink';
+import { project_path } from '../../data/ProjectData';
 interface ProjectCardIF {
   img: string;
   alt: string;
@@ -11,8 +10,8 @@ interface ProjectCardIF {
 }
 export function ProjectCard({ img, alt, title, desc, slug }: ProjectCardIF) {
   return (
-    <section className={s.projectCard}>
-      <div className={s.image}>
+    <section className='project-card'>
+      <div className='project-card__image'>
         <Image
           src={img}
           layout='intrinsic'
@@ -21,13 +20,13 @@ export function ProjectCard({ img, alt, title, desc, slug }: ProjectCardIF) {
           alt={alt}
         />
       </div>
-      <article className={s.body}>
-        <div className={s.title}>{title}</div>
-        <p className={s.desc}>
+      <article className='project-card__body'>
+        <div className='project-card__title'>{title}</div>
+        <p className='project-card__desc'>
           {desc.length > 200 ? desc.substr(0, 200) + '...' : desc}
         </p>
       </article>
-      <div className={s.button}>
+      <div className='project-card__button'>
         <AccentLink name='Go &rarr;' HREF={project_path + slug} />
       </div>
     </section>

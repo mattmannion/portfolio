@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { api } from '/env';
-import { getAllUsersIF } from '/types/requests/users';
+import { api } from '../../env';
+import { getAllUsersIF } from '../../types/requests/users';
 
 const users_path = api + '/users';
 
