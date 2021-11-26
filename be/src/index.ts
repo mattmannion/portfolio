@@ -1,7 +1,7 @@
 require('dotenv').config();
 import 'reflect-metadata';
 import express, { json } from 'express';
-import { path, port } from './env';
+import { path, port, prod } from './env';
 import cors from './middleware/cors';
 import session from './middleware/redis-session';
 import router from './routes/router';
@@ -12,7 +12,7 @@ import TypeOrmInit from './db/typeorm.db';
 const app = express();
 
 // if behind a proxy like nginx
-// app.set('trust proxy', true);
+app.set('trust proxy', prod);
 
 // redis session
 app.use(session);
@@ -27,12 +27,13 @@ app.use(json());
 // server router
 app.use(...router);
 
-// main iife
 (async function () {
-  // Typeorm
-  await TypeOrmInit();
+  try {
+    await TypeOrmInit();
 
-  // server start
-  // app.listen(port, () => console.log(`live @ ${path}${port}`));
-  app.listen(port, () => console.log('live @ ' + path + port));
+    app.listen(port, () => console.log('live @ ' + path + port));
+  } catch (error) {
+    if (error instanceof Error) return console.log(error.message);
+    return console.log('Unknown Error');
+  }
 })();
