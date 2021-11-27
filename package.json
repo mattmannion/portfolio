@@ -1,0 +1,16 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mattmannion/portfolio.git",
+  "author": "Matt Mannion <mattpmannion@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "be:d": "npm run dev --prefix be",
+    "ne:d": "npm run dev --prefix ne",
+    "dev": "fish ./dc.sh && run-p be:d ne:d",
+    "be:p": "npm run stage --prefix be",
+    "ne:p": "npm run start --prefix ne",
+    "stage": "fish ./dc.sh && run-p be:p ne:p"
+  }
+}

@@ -5,6 +5,8 @@ services:
     image: redis:6.2-alpine
     command: redis-server
     restart: on-failure
+    ports:
+      - 6379:6379
 
   postgres:
     container_name: postgres-dev
@@ -14,45 +16,45 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: portfolio
     ports:
-      - '5432:5432'
+      - 5432:5432
     volumes:
       - ./pgdata:/var/lib/data
     restart: on-failure
 
-  node:
-    container_name: node-dev
-    build:
-      context: ./be
-      dockerfile: Dockerfile.dev
-    ports:
-      - 7890:7890
-    volumes:
-      - './be:/usr/app'
-      - '/usr/app/node_modules'
-    environment:
-      - TYPEORM_LOGGING=true
-    depends_on:
-      - redis
-      - postgres
-    links:
-      - redis
-      - postgres
+  # node:
+  #   container_name: node-dev
+  #   build:
+  #     context: ./be
+  #     dockerfile: Dockerfile.dev
+  #   ports:
+  #     - 7890:7890
+  #   volumes:
+  #     - './be:/usr/app'
+  #     - '/usr/app/node_modules'
+  #   environment:
+  #     - TYPEORM_LOGGING=true
+  #   depends_on:
+  #     - redis
+  #     - postgres
+  #   links:
+  #     - redis
+  #     - postgres
 
-  next:
-    container_name: next-dev
-    build:
-      context: ./ne
-      dockerfile: Dockerfile.dev
-    ports:
-      - 3000:3000
-    volumes:
-      - './ne:/usr/app'
-      - '/usr/app/node_modules'
-    environment:
-      - CHOKIDAR_USEPOLLING=true
-    depends_on:
-      - redis
-      - postgres
-    links:
-      - redis
-      - postres
+  # next:
+  #   container_name: next-dev
+  #   build:
+  #     context: ./ne
+  #     dockerfile: Dockerfile.dev
+  #   ports:
+  #     - 3000:3000
+  #   volumes:
+  #     - './ne:/usr/app'
+  #     - '/usr/app/node_modules'
+  #   environment:
+  #     - CHOKIDAR_USEPOLLING=true
+  #   depends_on:
+  #     - redis
+  #     - postgres
+  #   links:
+  #     - redis
+  #     - postres

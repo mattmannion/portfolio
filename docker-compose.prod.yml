@@ -28,6 +28,7 @@ services:
       - './be:/usr/app'
       - '/usr/app/node_modules'
     environment:
+      - TYPEORM_HOST=postgres
       - TYPEORM_LOGGING=false
     depends_on:
       - redis

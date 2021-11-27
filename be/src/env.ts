@@ -11,7 +11,7 @@ export const port: number = prod ? +env.PORT! : 7890;
 // redis
 export const redis = {
   port: prod ? +env.REDIS_PORT! : 6379,
-  host: prod ? env.REDIS_HOST! : 'redis',
+  host: prod ? env.REDIS_HOST! : 'localhost',
   password: prod ? env.REDIS_PW! : undefined,
   session: {
     name: env.SESSION_NAME!,
@@ -22,7 +22,7 @@ export const redis = {
 
 // db
 export const pg: PostgresConnectionOptions = {
-  host: prod ? env.TYPEORM_HOST! : 'postgres',
+  host: prod ? env.TYPEORM_HOST! : 'localhost',
   database: prod ? env.TYPEORM_DATABASE! : 'portfolio',
   username: prod ? env.TYPEORM_USERNAME! : 'postgres',
   password: prod ? env.TYPEORM_PASSWORD! : 'postgres',

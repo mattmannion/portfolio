@@ -5,10 +5,9 @@
   "scripts": {
     "ts": "tsc -w",
     "rf": "rimraf dist/*",
-    "monl": "NODE_ENV=dev nodemon dist/index.js",
-    "devl": "run-p rf ts monl",
-    "mon": "NODE_ENV=dev nodemon dist/index.js",
+    "mon": "TYPEORM_LOGGING=true TYPEORM_HOST=localhost NODE_ENV=dev nodemon dist/index.js",
     "dev": "run-p rf ts mon",
+    "stage": "rimraf dist/* && tsc && TYPEORM_LOGGING=false TYPEORM_HOST=localhost NODE_ENV=dev node dist/index.js",
     "start": "rimraf dist/* && tsc && NODE_ENV=prod node dist/index.js"
   },
   "keywords": [],
