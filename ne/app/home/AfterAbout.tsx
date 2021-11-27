@@ -1,4 +1,4 @@
-import { AccentLink } from '../../components/AccentLink';
+import { AccentLink } from '/components/AccentLink';
 
 export function AfterAbout() {
   return (

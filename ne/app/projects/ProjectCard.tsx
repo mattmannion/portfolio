@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { AccentLink } from '../../components/AccentLink';
-import { project_path } from '../../data/ProjectData';
+import { AccentLink } from '/components/AccentLink';
+import { project_path } from '/data/ProjectData';
 interface ProjectCardIF {
   img: string;
   alt: string;

@@ -1,5 +1,5 @@
-import { ContactForm } from '../app/contact/ContactForm';
-import { ContactInfo } from '../app/contact/ContactInfo';
+import { ContactForm } from '/app/contact/ContactForm';
+import { ContactInfo } from '/app/contact/ContactInfo';
 
 export default function ContactPage() {
   return (

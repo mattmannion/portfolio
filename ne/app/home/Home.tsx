@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { About } from './About';
-import { AfterAbout } from './AfterAbout';
+import { About } from '/app/home/About';
+import { AfterAbout } from '/app/home/AfterAbout';
 
 export function Home() {
   return (
