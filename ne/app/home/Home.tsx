@@ -14,7 +14,7 @@ export function Home() {
           width={4096}
           height={1982}
           alt='computer screen with code'
-          placeholder='blur'
+          // placeholder='blur'
           priority
         />
         <div className='home__info'>

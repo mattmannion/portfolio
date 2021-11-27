@@ -19,7 +19,7 @@ export function ProjectCard({ img, alt, title, desc, slug }: ProjectCardIF) {
           height={900}
           width={1600}
           alt={alt}
-          placeholder='blur'
+          // placeholder='blur'
           priority
         />
       </div>
