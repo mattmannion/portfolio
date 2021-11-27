@@ -42,6 +42,7 @@ export function Project({
               alt={alt}
               layout='intrinsic'
               {...SixteenByNine(160)}
+              placeholder='blur'
               priority
             />
           </div>
