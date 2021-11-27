@@ -1,4 +1,4 @@
-import { tech } from '../util/TechIconProps';
+import { tech } from '/util/TechIconProps';
 
 export interface ProjectDataIF {
   slug: string;
@@ -12,7 +12,14 @@ export interface ProjectDataIF {
 }
 
 export const project_path = '/projects/';
-const images = '/images/';
+/**
+ * old local path
+ * const images = '/images/';
+ *
+ * below is the cloundinary path
+ */
+
+const images = '/portfolio/img/';
 
 export const ProjectData: ProjectDataIF[] = [
   {

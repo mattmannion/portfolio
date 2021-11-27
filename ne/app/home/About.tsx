@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { AccentLink } from '../../components/AccentLink';
+import { AccentLink } from '/components/AccentLink';
 
 const image_size = 400;
 

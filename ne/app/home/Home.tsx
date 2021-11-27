@@ -1,6 +1,7 @@
+import { About } from '/app/home/About';
+import { AfterAbout } from '/app/home/AfterAbout';
+import { CldImg } from '/util/hooks';
 import Image from 'next/image';
-import { About } from './About';
-import { AfterAbout } from './AfterAbout';
 
 export function Home() {
   return (
@@ -8,11 +9,12 @@ export function Home() {
       <div className='home'>
         <Image
           className='home__image'
-          src='/images/home_hero_blur.jpg'
+          src={CldImg('/portfolio/img/home_hero_blur')}
           layout='intrinsic'
           width={4096}
-          height={1960}
+          height={1982}
           alt='computer screen with code'
+          priority
         />
         <div className='home__info'>
           <div>
