@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { AccentLink } from '/components/AccentLink';
 import { project_path } from '/data/ProjectData';
+import { CldImg } from '/util/hooks';
 interface ProjectCardIF {
   img: string;
   alt: string;
@@ -13,11 +14,12 @@ export function ProjectCard({ img, alt, title, desc, slug }: ProjectCardIF) {
     <section className='project-card'>
       <div className='project-card__image'>
         <Image
-          src={img}
+          src={CldImg(img)}
           layout='intrinsic'
           height={900}
           width={1600}
           alt={alt}
+          priority
         />
       </div>
       <article className='project-card__body'>

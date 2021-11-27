@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { SixteenByNine } from '/util/util';
 import { tech, TechIconProps } from '/util/TechIconProps';
 import { AccentLink } from '/components/AccentLink';
+import { CldImg } from '/util/hooks';
 
 function TechList({ tech }: { tech: tech }) {
   return (
@@ -37,10 +38,11 @@ export function Project({
         <section className='project__body'>
           <div className='project__img-container'>
             <Image
-              src={img}
+              src={CldImg(img)}
               alt={alt}
               layout='intrinsic'
               {...SixteenByNine(160)}
+              priority
             />
           </div>
           <article className='project__info-container'>
