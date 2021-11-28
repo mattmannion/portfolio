@@ -4,7 +4,7 @@ services:
     container_name: redis
     image: redis:6.2-alpine
     command: redis-server
-    restart: on-failure
+    restart: always
 
   postgres:
     container_name: postgres
@@ -15,7 +15,7 @@ services:
       POSTGRES_DB: portfolio
     volumes:
       - ./pgdata:/var/lib/data
-    restart: on-failure
+    restart: always
 
   node:
     container_name: node
@@ -36,6 +36,7 @@ services:
     links:
       - redis
       - postgres
+    restart: always
 
   next:
     container_name: next
@@ -55,3 +56,4 @@ services:
     links:
       - redis
       - postres
+    restart: always
